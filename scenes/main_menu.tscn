@@ -1,0 +1,44 @@
+[gd_scene load_steps=2 format=3 uid="uid://c88jviheskobs"]
+
+[ext_resource type="Script" uid="uid://bxx5k66m4c3lo" path="res://scripts/main_menu.gd" id="1_l6cm7"]
+
+[node name="main_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_l6cm7")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="titulo" type="RichTextLabel" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+bbcode_enabled = true
+text = "ANY COLOUR YOU [color=red]LIKE[/color]"
+fit_content = true
+
+[node name="iniciar" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "INICIAR"
+
+[node name="creditos" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "CRÉDITOS"
+
+[node name="sair" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "SAIR"
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/sair" to="." method="_on_sair_pressed"]
