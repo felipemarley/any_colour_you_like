@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://phbd4oapfegb"]
+
+[ext_resource type="Script" uid="uid://71kh8v01rvbk" path="res://scripts/document_standard.gd" id="1_eyh3l"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eyh3l"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="DocumentTest" type="Panel"]
+anchors_preset = -1
+anchor_right = 0.169
+anchor_bottom = 0.371
+offset_right = -0.320023
+offset_bottom = -0.120026
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_eyh3l")
+script = ExtResource("1_eyh3l")
+text_path = NodePath("RichTextLabel")
+metadata/_custom_type_script = "uid://71kh8v01rvbk"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
