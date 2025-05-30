@@ -23,3 +23,7 @@ func _gui_input(event: InputEvent) -> void:
 				is_dragging = false
 	elif event is InputEventMouseMotion and is_dragging:
 		global_position = get_global_mouse_position() - drag_offset
+
+func _set_stamp(texture): 
+	get_node(texture_path).texture = texture
+	get_node(texture_path).show()
