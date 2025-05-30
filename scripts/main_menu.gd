@@ -1,6 +1,9 @@
 extends Control
 @onready var creditos: ColorRect = $creditos
 
+@onready var main_buttons: VBoxContainer = $MarginContainer/MainButtons
+@onready var painel_configuracoes: Panel = $painel_configuracoes
+
 
 func _on_sair_pressed() -> void:
 	get_tree().quit()

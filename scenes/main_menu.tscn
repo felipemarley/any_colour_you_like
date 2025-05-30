@@ -24,10 +24,10 @@ theme_override_constants/margin_right = 400
 theme_override_constants/margin_bottom = 250
 metadata/_edit_lock_ = true
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="MainButtons" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 
-[node name="titulo" type="RichTextLabel" parent="MarginContainer/VBoxContainer"]
+[node name="titulo" type="RichTextLabel" parent="MarginContainer/MainButtons"]
 layout_mode = 2
 theme_override_font_sizes/normal_font_size = 40
 bbcode_enabled = true
@@ -35,19 +35,23 @@ text = "ANY COLOUR YOU [color=red]LIKE[/color]"
 fit_content = true
 horizontal_alignment = 1
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/MainButtons"]
 layout_mode = 2
 theme_override_constants/margin_top = 100
 
-[node name="iniciar" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="iniciar" type="Button" parent="MarginContainer/MainButtons"]
 layout_mode = 2
 text = "INICIAR"
 
-[node name="creditos" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="configuracoes" type="Button" parent="MarginContainer/MainButtons"]
+layout_mode = 2
+text = "CONFIGURAÇÕES"
+
+[node name="creditos" type="Button" parent="MarginContainer/MainButtons"]
 layout_mode = 2
 text = "CRÉDITOS"
 
-[node name="sair" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="sair" type="Button" parent="MarginContainer/MainButtons"]
 layout_mode = 2
 text = "SAIR"
 
@@ -94,7 +98,33 @@ grow_horizontal = 2
 grow_vertical = 0
 text = "VOLTAR"
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/iniciar" to="." method="_on_iniciar_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/creditos" to="." method="_on_creditos_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/sair" to="." method="_on_sair_pressed"]
+[node name="painel_configuracoes" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -310.0
+offset_top = -197.5
+offset_right = 310.0
+offset_bottom = 197.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="titulo_configuracoes" type="Label" parent="painel_configuracoes"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 86.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 32
+text = "Configurações"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="MarginContainer/MainButtons/iniciar" to="." method="_on_iniciar_pressed"]
+[connection signal="pressed" from="MarginContainer/MainButtons/configuracoes" to="." method="_on_iniciar_pressed"]
+[connection signal="pressed" from="MarginContainer/MainButtons/creditos" to="." method="_on_creditos_pressed"]
+[connection signal="pressed" from="MarginContainer/MainButtons/sair" to="." method="_on_sair_pressed"]
 [connection signal="pressed" from="creditos/voltar" to="." method="_on_voltar_pressed"]
