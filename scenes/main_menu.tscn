@@ -52,6 +52,7 @@ layout_mode = 2
 text = "SAIR"
 
 [node name="creditos" type="ColorRect" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -85,10 +86,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -31.0
-offset_top = -139.0
-offset_right = 31.0
-offset_bottom = -114.0
+offset_left = -31.5
+offset_top = -146.0
+offset_right = 31.5
+offset_bottom = -121.0
 grow_horizontal = 2
 grow_vertical = 0
 text = "VOLTAR"
