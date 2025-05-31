@@ -1,6 +1,5 @@
 extends TextureButton
 
-
 @onready var rg = $"../../../documents/rg"
 
 func _ready():
