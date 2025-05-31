@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://djkb0d0xdkvpp"]
+
+[ext_resource type="Texture2D" uid="uid://bb43gkly0r5lh" path="res://assets/documents/declaracao.png" id="1_xvycv"]
+[ext_resource type="Texture2D" uid="uid://cf8wiqfxpi6rt" path="res://assets/documents/declaracao-hover.png" id="2_yiofv"]
+
+[node name="DeclaracaoButton" type="TextureButton"]
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("1_xvycv")
+texture_pressed = ExtResource("2_yiofv")
+texture_hover = ExtResource("2_yiofv")

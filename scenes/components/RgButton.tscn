@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://cw2iey6y1eegl"]
+
+[ext_resource type="Texture2D" uid="uid://dyk4kohqh1hk5" path="res://assets/documents/rg.png" id="1_rg70p"]
+[ext_resource type="Texture2D" uid="uid://8esy4r8depdp" path="res://assets/documents/rg-hover.png" id="2_ss58q"]
+
+[sub_resource type="GDScript" id="GDScript_rg70p"]
+script/source = "extends TextureButton
+"
+
+[node name="RgButton" type="TextureButton"]
+offset_left = 67.0
+offset_top = 16.0
+offset_right = 123.0
+offset_bottom = 50.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("1_rg70p")
+texture_pressed = ExtResource("2_ss58q")
+texture_hover = ExtResource("2_ss58q")
+script = SubResource("GDScript_rg70p")

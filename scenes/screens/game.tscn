@@ -1,11 +1,16 @@
-[gd_scene load_steps=9 format=3 uid="uid://bnj3012sgdq65"]
+[gd_scene load_steps=15 format=3 uid="uid://bnj3012sgdq65"]
 
 [ext_resource type="Texture2D" uid="uid://cftygcr1f7qxc" path="res://icon.svg" id="1_o78e0"]
 [ext_resource type="Script" uid="uid://1xjq4y0pujq4" path="res://scripts/et.gd" id="2_ln6eb"]
+[ext_resource type="PackedScene" uid="uid://cw2iey6y1eegl" path="res://scenes/components/RgButton.tscn" id="3_0q6jn"]
 [ext_resource type="Script" uid="uid://cfg1t4sh8q624" path="res://scripts/document_scene.gd" id="3_4ji0l"]
+[ext_resource type="Script" uid="uid://bcf3t5a7ieyuc" path="res://scripts/rg_button.gd" id="4_kauht"]
 [ext_resource type="PackedScene" uid="uid://phbd4oapfegb" path="res://scenes/components/document_declaracao.tscn" id="4_o78e0"]
 [ext_resource type="PackedScene" uid="uid://dq4kmy5v48yay" path="res://scenes/components/document_certidao.tscn" id="5_ln6eb"]
+[ext_resource type="PackedScene" uid="uid://djkb0d0xdkvpp" path="res://scenes/components/declaracao_button.tscn" id="5_yruvw"]
 [ext_resource type="PackedScene" uid="uid://c4escptl3u4if" path="res://scenes/components/document_rg.tscn" id="6_4ji0l"]
+[ext_resource type="Script" uid="uid://dyhceg4w7pma5" path="res://scripts/declaracao_button.gd" id="6_vsgdc"]
+[ext_resource type="PackedScene" uid="uid://bgpnodm1qguo7" path="res://scenes/components/certidao_button.tscn" id="7_ggwlb"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_yqjtg"]
 animations = [{
@@ -20,6 +25,19 @@ animations = [{
 "name": &"default",
 "speed": 5.0
 }]
+
+[sub_resource type="GDScript" id="GDScript_ggwlb"]
+resource_name = "res://scripts/certidao_button.gd"
+script/source = "extends TextureButton
+
+@onready var certidao = $\"../../../documents/certidao\"
+
+func _ready():
+	certidao.visible = false
+
+func _on_pressed() -> void:
+	certidao.visible = not certidao.visible  # Alterna visibilidade
+"
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lnu2h"]
 
@@ -58,6 +76,27 @@ frame = 1
 frame_progress = 0.0761871
 script = ExtResource("2_ln6eb")
 
+[node name="RgButton" parent="HSplitContainer/SubViewportContainer/SubViewport" instance=ExtResource("3_0q6jn")]
+offset_left = 53.0
+offset_top = 48.0
+offset_right = 117.0
+offset_bottom = 112.0
+script = ExtResource("4_kauht")
+
+[node name="DeclaracaoButton" parent="HSplitContainer/SubViewportContainer/SubViewport" instance=ExtResource("5_yruvw")]
+offset_left = 152.0
+offset_top = 7.0
+offset_right = 280.0
+offset_bottom = 135.0
+script = ExtResource("6_vsgdc")
+
+[node name="CertidaoButton" parent="HSplitContainer/SubViewportContainer/SubViewport" instance=ExtResource("7_ggwlb")]
+offset_left = 286.0
+offset_top = 32.0
+offset_right = 391.0
+offset_bottom = 101.0
+script = SubResource("GDScript_ggwlb")
+
 [node name="documents" type="Panel" parent="HSplitContainer"]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_lnu2h")
@@ -65,17 +104,18 @@ script = ExtResource("3_4ji0l")
 
 [node name="certidao" parent="HSplitContainer/documents" instance=ExtResource("5_ln6eb")]
 layout_mode = 1
-offset_left = 307.0
-offset_top = 417.0
-offset_right = -77.0
-offset_bottom = -147.0
+offset_left = 315.0
+offset_top = 486.0
+offset_right = -69.0
+offset_bottom = -78.0
 
 [node name="rg" parent="HSplitContainer/documents" instance=ExtResource("6_4ji0l")]
+visible = false
 layout_mode = 1
-offset_left = 89.0
-offset_top = 428.0
-offset_right = -383.0
-offset_bottom = -180.0
+offset_left = 87.0
+offset_top = 463.0
+offset_right = -385.0
+offset_bottom = -145.0
 document_text = "RICHARDESO DAZUAKER POLES
 RG - 111.222.444
 CEF - 0921012912
@@ -86,10 +126,12 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 339.0
-offset_top = 67.0
-offset_right = -111.0
-offset_bottom = -375.0
-grow_horizontal = 1
-grow_vertical = 1
+offset_left = 299.0
+offset_top = 142.0
+offset_right = -151.0
+offset_bottom = -300.0
 document_text = "DECLARO PARA OS DEVIDOS FINS QUE RICHARDESO É VERDE E TEM ACESSO À COTA E A SER ESTUDANTE DA UFRM"
+
+[connection signal="pressed" from="HSplitContainer/SubViewportContainer/SubViewport/RgButton" to="HSplitContainer/SubViewportContainer/SubViewport/RgButton" method="_on_pressed"]
+[connection signal="pressed" from="HSplitContainer/SubViewportContainer/SubViewport/DeclaracaoButton" to="HSplitContainer/SubViewportContainer/SubViewport/DeclaracaoButton" method="_on_pressed"]
+[connection signal="pressed" from="HSplitContainer/SubViewportContainer/SubViewport/CertidaoButton" to="HSplitContainer/SubViewportContainer/SubViewport/CertidaoButton" method="_on_pressed"]
