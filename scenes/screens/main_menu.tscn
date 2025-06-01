@@ -1,45 +1,43 @@
-[gd_scene load_steps=12 format=3 uid="uid://c88jviheskobs"]
+[gd_scene load_steps=6 format=3 uid="uid://c88jviheskobs"]
 
-[ext_resource type="Script" uid="uid://bxx5k66m4c3lo" path="res://scripts/main_menu.gd" id="1_l6cm7"]
-[ext_resource type="Texture2D" uid="uid://dud7oishjscix" path="res://assets/background/espaco.png" id="2_8ln24"]
-[ext_resource type="Script" uid="uid://bsqph3mkw8kn7" path="res://scripts/audio_control.gd" id="2_bqqt6"]
-[ext_resource type="AudioStream" uid="uid://bu3v3r120ytaw" path="res://assets/sounds/space-bass-loop.wav" id="4_wu84c"]
+[ext_resource type="AudioStream" uid="uid://brs1k6x2vupou" path="res://assets/sounds/space-bass-loop.wav" id="3_5weqt"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8ln24"]
-atlas = ExtResource("2_8ln24")
-region = Rect2(0, 0, 1280, 720)
+[sub_resource type="GDScript" id="GDScript_idsrk"]
+script/source = "extends Control
+@onready var creditos: ColorRect = $creditos
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_rtw2f"]
-atlas = ExtResource("2_8ln24")
-region = Rect2(1280, 0, 1280, 720)
+@onready var main_buttons: VBoxContainer = $MarginContainer/MainButtons
+@onready var painel_configuracoes: Panel = $painel_configuracoes
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_oa1go"]
-atlas = ExtResource("2_8ln24")
-region = Rect2(2560, 0, 1280, 720)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_tbmy8"]
-atlas = ExtResource("2_8ln24")
-region = Rect2(3840, 0, 1280, 720)
+func _on_sair_pressed() -> void:
+	get_tree().quit()
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_1ajci"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_8ln24")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_rtw2f")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_oa1go")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_tbmy8")
-}],
-"loop": true,
-"name": &"default",
-"speed": 3.0
-}]
+
+func _on_iniciar_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://scenes/screens/intro.tscn\")
+	
+func _ready() -> void:
+	main_buttons.visible = true
+	painel_configuracoes.visible = false
+
+
+func _on_creditos_pressed() -> void:
+	creditos.show()
+
+
+func _on_voltar_pressed() -> void:
+	creditos.hide()
+
+
+func _on_configuracoes_pressed() -> void:
+	main_buttons.visible = false
+	painel_configuracoes.visible = true
+
+
+func _on_bttn_voltar_das_configs_pressed() -> void:
+	_ready()
+"
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_ekxnf"]
 color = Color(1, 1, 1, 1)
@@ -49,6 +47,21 @@ thickness = 4
 color = Color(0.254902, 0.764706, 1, 1)
 thickness = 4
 
+[sub_resource type="GDScript" id="GDScript_5weqt"]
+script/source = "extends HSlider
+
+@export var audio_bus_name : String
+
+var audio_bus_id
+
+func _ready() -> void:
+	audio_bus_id = AudioServer.get_bus_index(audio_bus_name)
+	
+func _on_value_changed(value: float) -> void:
+	var db = linear_to_db(value)
+	AudioServer.set_bus_volume_db(audio_bus_id, db)
+"
+
 [node name="main_menu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -56,13 +69,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_l6cm7")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(640, 358)
-sprite_frames = SubResource("SpriteFrames_1ajci")
-autoplay = "default"
-frame_progress = 0.832272
+script = SubResource("GDScript_idsrk")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -218,7 +225,7 @@ theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_bqqt6")
 max_value = 1.0
 step = 0.05
 value = 1.0
-script = ExtResource("2_bqqt6")
+script = SubResource("GDScript_5weqt")
 audio_bus_name = "Music"
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="painel_configuracoes/VBoxContainer"]
@@ -239,11 +246,11 @@ theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_bqqt6")
 max_value = 1.0
 step = 0.05
 value = 1.0
-script = ExtResource("2_bqqt6")
+script = SubResource("GDScript_5weqt")
 audio_bus_name = "SFX"
 
-[node name="AudioStreamMusic" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("4_wu84c")
+[node name="AudioMusic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_5weqt")
 autoplay = true
 bus = &"Music"
 

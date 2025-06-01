@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bgpnodm1qguo7"]
+
+[ext_resource type="Texture2D" uid="uid://drsx0m735ccvd" path="res://assets/documents/nascimento.png" id="1_vtgdh"]
+[ext_resource type="Texture2D" uid="uid://6qg3xg0q66nl" path="res://assets/documents/nascimento-hover.png" id="2_rm7m8"]
+
+[node name="CertidaoButton" type="TextureButton"]
+offset_left = 104.0
+offset_top = 39.0
+offset_right = 209.0
+offset_bottom = 108.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("1_vtgdh")
+texture_pressed = ExtResource("2_rm7m8")
+texture_hover = ExtResource("2_rm7m8")
