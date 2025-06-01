@@ -343,31 +343,31 @@ render_target_update_mode = 4
 
 [node name="et" type="AnimatedSprite2D" parent="HSplitContainer/SubViewportContainer/SubViewport"]
 show_behind_parent = true
-position = Vector2(342.562, 378.25)
+position = Vector2(335, 345)
 scale = Vector2(1.30029, 1.10352)
 sprite_frames = SubResource("SpriteFrames_yqjtg")
 animation = &"green-01"
 script = ExtResource("2_ln6eb")
 
 [node name="RgButton" parent="HSplitContainer/SubViewportContainer/SubViewport" instance=ExtResource("3_0q6jn")]
-offset_left = 53.0
-offset_top = 48.0
-offset_right = 117.0
-offset_bottom = 112.0
+offset_left = 27.0
+offset_top = 29.0
+offset_right = 99.0
+offset_bottom = 109.0
 script = ExtResource("4_kauht")
 
 [node name="DeclaracaoButton" parent="HSplitContainer/SubViewportContainer/SubViewport" instance=ExtResource("5_yruvw")]
-offset_left = 152.0
-offset_top = 7.0
-offset_right = 280.0
-offset_bottom = 135.0
+offset_left = 17.0
+offset_top = 85.0
+offset_right = 145.0
+offset_bottom = 213.0
 script = ExtResource("6_vsgdc")
 
 [node name="CertidaoButton" parent="HSplitContainer/SubViewportContainer/SubViewport" instance=ExtResource("7_ggwlb")]
-offset_left = 286.0
-offset_top = 32.0
-offset_right = 391.0
-offset_bottom = 101.0
+offset_left = 11.0
+offset_top = 193.0
+offset_right = 116.0
+offset_bottom = 262.0
 script = SubResource("GDScript_ggwlb")
 
 [node name="documents" type="Panel" parent="HSplitContainer"]
