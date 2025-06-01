@@ -4,6 +4,7 @@ extends Panel
 @export_multiline var document_text: = ""
 @export_node_path("RichTextLabel") var text_path: NodePath = ""
 @export_node_path("TextureRect") var texture_path: NodePath = ""
+signal double_click
 
 var is_dragging := false
 var drag_offset := Vector2.ZERO
@@ -11,6 +12,7 @@ var drag_offset := Vector2.ZERO
 func _ready() -> void:
 	get_node(text_path).text = document_text
 	get_node(text_path).fit_content = true
+	
 
 func _gui_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
@@ -23,6 +25,8 @@ func _gui_input(event: InputEvent) -> void:
 				is_dragging = false
 	elif event is InputEventMouseMotion and is_dragging:
 		global_position = get_global_mouse_position() - drag_offset
+	elif event is InputEventMouseButton and event.double_click:
+		double_click.emit()
 
 func _set_stamp(texture): 
 	get_node(texture_path).texture = texture

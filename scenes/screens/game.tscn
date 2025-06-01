@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://phbd4oapfegb" path="res://scenes/components/document_declaracao.tscn" id="4_o78e0"]
 [ext_resource type="PackedScene" uid="uid://dq4kmy5v48yay" path="res://scenes/components/document_certidao.tscn" id="5_ln6eb"]
 [ext_resource type="PackedScene" uid="uid://c4escptl3u4if" path="res://scenes/components/document_rg.tscn" id="6_4ji0l"]
+[ext_resource type="Texture2D" uid="uid://5a1024ibvt1g" path="res://assets/main_scene.png" id="7_0q6jn"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_yqjtg"]
 animations = [{
@@ -21,8 +22,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lnu2h"]
-
 [node name="Game" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -31,6 +30,17 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 396.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_0q6jn")
+stretch_mode = 4
+
 [node name="HSplitContainer" type="HSplitContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
@@ -38,44 +48,46 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-split_offset = 640
+split_offset = 707
 dragging_enabled = false
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="HSplitContainer"]
 layout_mode = 2
+mouse_filter = 2
+mouse_default_cursor_shape = 4
 
 [node name="SubViewport" type="SubViewport" parent="HSplitContainer/SubViewportContainer"]
+transparent_bg = true
 handle_input_locally = false
+size = Vector2i(640, 720)
 render_target_update_mode = 4
 
 [node name="et" type="AnimatedSprite2D" parent="HSplitContainer/SubViewportContainer/SubViewport"]
 self_modulate = Color(0.675222, 0, 0.321337, 1)
 show_behind_parent = true
-position = Vector2(294, 291)
+position = Vector2(335, 391)
 scale = Vector2(2.16797, 2.14062)
 sprite_frames = SubResource("SpriteFrames_yqjtg")
-frame = 1
-frame_progress = 0.0761871
+frame_progress = 0.760378
 script = ExtResource("2_ln6eb")
 
 [node name="documents" type="Panel" parent="HSplitContainer"]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_lnu2h")
 script = ExtResource("3_4ji0l")
 
 [node name="certidao" parent="HSplitContainer/documents" instance=ExtResource("5_ln6eb")]
 layout_mode = 1
-offset_left = 307.0
+offset_left = 279.0
 offset_top = 417.0
-offset_right = -77.0
-offset_bottom = -147.0
+offset_right = -42.0
+offset_bottom = -131.0
 
 [node name="rg" parent="HSplitContainer/documents" instance=ExtResource("6_4ji0l")]
 layout_mode = 1
-offset_left = 89.0
+offset_left = 42.0
 offset_top = 428.0
-offset_right = -383.0
-offset_bottom = -180.0
+offset_right = -345.0
+offset_bottom = -154.0
 document_text = "RICHARDESO DAZUAKER POLES
 RG - 111.222.444
 CEF - 0921012912
@@ -86,10 +98,8 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 339.0
+offset_left = 286.0
 offset_top = 67.0
-offset_right = -111.0
-offset_bottom = -375.0
-grow_horizontal = 1
-grow_vertical = 1
+offset_right = -64.0
+offset_bottom = -341.0
 document_text = "DECLARO PARA OS DEVIDOS FINS QUE RICHARDESO É VERDE E TEM ACESSO À COTA E A SER ESTUDANTE DA UFRM"
