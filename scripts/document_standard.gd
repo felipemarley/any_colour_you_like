@@ -4,7 +4,6 @@ extends Panel
 @export_multiline var document_text: = ""
 @export_node_path("RichTextLabel") var text_path: NodePath = ""
 @export_node_path("TextureRect") var texture_path: NodePath = ""
-signal double_click
 
 var is_dragging := false
 var drag_offset := Vector2.ZERO
@@ -13,7 +12,6 @@ var margin := 5  # Margem de segurança para não encostar nas bordas
 func _ready() -> void:
 	get_node(text_path).text = document_text
 	get_node(text_path).fit_content = true
-	
 
 func _gui_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
@@ -39,7 +37,6 @@ func _clamp_position_to_viewport(position: Vector2) -> Vector2:
 	position.y = clamp(position.y, margin, viewport_size.y - doc_size.y - margin)
 	
 	return position
-
 
 func _set_stamp(texture): 
 	get_node(texture_path).texture = texture
