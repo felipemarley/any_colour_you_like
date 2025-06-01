@@ -1,8 +1,9 @@
-[gd_scene load_steps=54 format=3 uid="uid://bnj3012sgdq65"]
+[gd_scene load_steps=67 format=3 uid="uid://bnj3012sgdq65"]
 
 [ext_resource type="Texture2D" uid="uid://b1dftehnwae8k" path="res://assets/background.png" id="1_e0wmo"]
 [ext_resource type="Texture2D" uid="uid://dh8jyycca2rmo" path="res://assets/aliens/alien-green-001.png" id="2_e0wmo"]
 [ext_resource type="Script" uid="uid://1xjq4y0pujq4" path="res://scripts/et.gd" id="2_ln6eb"]
+[ext_resource type="Texture2D" uid="uid://l1y5hcl5m338" path="res://assets/aliens/alien-blue-001.png" id="2_oni8f"]
 [ext_resource type="PackedScene" uid="uid://cw2iey6y1eegl" path="res://scenes/components/RgButton.tscn" id="3_0q6jn"]
 [ext_resource type="Script" uid="uid://cfg1t4sh8q624" path="res://scripts/document_scene.gd" id="3_4ji0l"]
 [ext_resource type="Texture2D" uid="uid://dcj2lh8113veo" path="res://assets/aliens/alien-red-001.png" id="3_xrk1x"]
@@ -13,6 +14,54 @@
 [ext_resource type="PackedScene" uid="uid://c4escptl3u4if" path="res://scenes/components/document_rg.tscn" id="6_4ji0l"]
 [ext_resource type="Script" uid="uid://dyhceg4w7pma5" path="res://scripts/declaracao_button.gd" id="6_vsgdc"]
 [ext_resource type="PackedScene" uid="uid://bgpnodm1qguo7" path="res://scenes/components/certidao_button.tscn" id="7_ggwlb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0lfbs"]
+atlas = ExtResource("2_oni8f")
+region = Rect2(0, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_12mik"]
+atlas = ExtResource("2_oni8f")
+region = Rect2(256, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bokoa"]
+atlas = ExtResource("2_oni8f")
+region = Rect2(768, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t327g"]
+atlas = ExtResource("2_oni8f")
+region = Rect2(1024, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3s7is"]
+atlas = ExtResource("2_oni8f")
+region = Rect2(1280, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_anv6b"]
+atlas = ExtResource("2_oni8f")
+region = Rect2(1536, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c3vub"]
+atlas = ExtResource("2_oni8f")
+region = Rect2(1792, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fmnc5"]
+atlas = ExtResource("2_oni8f")
+region = Rect2(2048, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6n4rh"]
+atlas = ExtResource("2_oni8f")
+region = Rect2(2304, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hw148"]
+atlas = ExtResource("2_oni8f")
+region = Rect2(2560, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pf5ww"]
+atlas = ExtResource("2_oni8f")
+region = Rect2(2816, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n6vwe"]
+atlas = ExtResource("2_oni8f")
+region = Rect2(3072, 0, 256, 256)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xrk1x"]
 atlas = ExtResource("2_e0wmo")
@@ -168,6 +217,47 @@ region = Rect2(4864, 0, 256, 256)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_yqjtg"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0lfbs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_12mik")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bokoa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t327g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3s7is")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_anv6b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c3vub")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fmnc5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6n4rh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hw148")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pf5ww")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n6vwe")
+}],
+"loop": true,
+"name": &"blue-01",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_xrk1x")
@@ -346,7 +436,7 @@ show_behind_parent = true
 position = Vector2(335, 345)
 scale = Vector2(1.30029, 1.10352)
 sprite_frames = SubResource("SpriteFrames_yqjtg")
-animation = &"green-01"
+animation = &"blue-01"
 script = ExtResource("2_ln6eb")
 
 [node name="RgButton" parent="HSplitContainer/SubViewportContainer/SubViewport" instance=ExtResource("3_0q6jn")]
