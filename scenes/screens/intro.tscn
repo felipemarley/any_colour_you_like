@@ -1304,6 +1304,7 @@ func _ready() -> void:
 [sub_resource type="Theme" id="Theme_t1qkj"]
 default_font_size = 28
 
+
 [node name="intro" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -1721,3 +1722,4 @@ stream = ExtResource("15_l1wbo")
 bus = &"Music"
 
 [connection signal="pressed" from="PularButton" to="." method="_on_pular_button_pressed"]
+
