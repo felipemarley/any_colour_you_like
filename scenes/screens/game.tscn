@@ -737,10 +737,10 @@ script = ExtResource("3_4ji0l")
 
 [node name="certidao" parent="HSplitContainer/documents" instance=ExtResource("5_ln6eb")]
 layout_mode = 1
-offset_left = 38.0
-offset_top = 250.0
-offset_right = -315.0
-offset_bottom = -317.0
+offset_left = 86.0
+offset_top = 256.0
+offset_right = -348.0
+offset_bottom = -305.0
 
 [node name="rg" parent="HSplitContainer/documents" instance=ExtResource("6_4ji0l")]
 layout_mode = 1
@@ -748,22 +748,10 @@ offset_left = 44.0
 offset_top = 60.0
 offset_right = -325.0
 offset_bottom = -525.0
-document_text = "RICHARDESO DAZUAKER POLES
+document_text = "RICHARDESO  POLES
 RG - 111.222.444
 CEF - 0921012912
 ETNIA - VERDE"
-
-[node name="TextureRect" type="TextureRect" parent="HSplitContainer/documents/rg"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -105.0
-offset_top = -72.0
-offset_right = 105.0
-offset_bottom = 73.0
-grow_horizontal = 2
-grow_vertical = 2
 
 [node name="declaracao" parent="HSplitContainer/documents" instance=ExtResource("4_o78e0")]
 layout_mode = 1
@@ -772,8 +760,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 287.0
 offset_top = 31.0
-offset_right = -56.0
-offset_bottom = -339.0
+offset_right = -11.0
+offset_bottom = -311.0
 document_text = "DECLARO PARA OS DEVIDOS FINS QUE RICHARDESO É VERDE E TEM ACESSO À COTA E A SER ESTUDANTE DA UFRM"
 
 [node name="b_aprovar" type="Button" parent="HSplitContainer/documents"]
