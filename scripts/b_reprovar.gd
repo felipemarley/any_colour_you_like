@@ -1,4 +1,4 @@
-extends Button
+extends TextureButton
 @onready var rg = $"../rg"
 @onready var certidao = $"../certidao"
 @onready var declaracao = $"../declaracao"

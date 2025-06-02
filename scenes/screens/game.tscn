@@ -1,4 +1,4 @@
-[gd_scene load_steps=140 format=3 uid="uid://bnj3012sgdq65"]
+[gd_scene load_steps=144 format=3 uid="uid://bnj3012sgdq65"]
 
 [ext_resource type="Script" uid="uid://dij8r2qps2ich" path="res://scripts/game.gd" id="1_a5hx5"]
 [ext_resource type="Texture2D" uid="uid://b1dftehnwae8k" path="res://assets/background.png" id="1_e0wmo"]
@@ -26,7 +26,11 @@
 [ext_resource type="PackedScene" uid="uid://bxvm4kooiohjk" path="res://scenes/components/document_declaracao_zoom.tscn" id="18_2xi1w"]
 [ext_resource type="Script" uid="uid://bk6uwfla5akf1" path="res://scripts/b_reprovar.gd" id="18_fw3uj"]
 [ext_resource type="Script" uid="uid://beer7ol0bbhd6" path="res://scripts/ending.gd" id="19_fw3uj"]
+[ext_resource type="Texture2D" uid="uid://bq7tclnp83xsb" path="res://assets/ferramenta-banca/selo_positivo.png" id="24_4tvho"]
 [ext_resource type="PackedScene" uid="uid://uoro18rf0nxu" path="res://scenes/components/document_certidao_zoom.tscn" id="24_r6qep"]
+[ext_resource type="Texture2D" uid="uid://dd0oiml7db6kk" path="res://assets/ferramenta-banca/selo_positivo-hover.png" id="25_50tgx"]
+[ext_resource type="Texture2D" uid="uid://bba11ioc1s4lm" path="res://assets/ferramenta-banca/selo_negtivo.png" id="25_ieted"]
+[ext_resource type="Texture2D" uid="uid://d0y20cu463stk" path="res://assets/ferramenta-banca/selo-negativo-hover.png" id="26_qrbu1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0lfbs"]
 atlas = ExtResource("2_oni8f")
@@ -888,7 +892,7 @@ render_target_update_mode = 4
 
 [node name="et" type="AnimatedSprite2D" parent="HSplitContainer/SubViewportContainer/SubViewport"]
 show_behind_parent = true
-position = Vector2(335, 345)
+position = Vector2(326, 382)
 scale = Vector2(1.30029, 1.10352)
 sprite_frames = SubResource("SpriteFrames_yqjtg")
 animation = &"blue-03"
@@ -958,23 +962,28 @@ offset_top = 31.0
 offset_right = -11.0
 offset_bottom = -311.0
 
-[node name="b_aprovar" type="Button" parent="HSplitContainer/documents"]
+[node name="b_aprovar" type="TextureButton" parent="HSplitContainer/documents"]
 layout_mode = 0
-offset_left = 46.0
-offset_top = 617.0
-offset_right = 249.0
-offset_bottom = 680.0
-text = "APROVAR"
+offset_left = 94.0
+offset_top = 559.0
+offset_right = 222.0
+offset_bottom = 687.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("24_4tvho")
+texture_pressed = ExtResource("25_50tgx")
+texture_hover = ExtResource("25_50tgx")
 script = ExtResource("17_2xi1w")
 
-[node name="b_reprovar" type="Button" parent="HSplitContainer/documents"]
+[node name="b_reprovar" type="TextureButton" parent="HSplitContainer/documents"]
 layout_mode = 0
-offset_left = 302.0
-offset_top = 617.0
-offset_right = 505.0
-offset_bottom = 680.0
-text = "REPROVAR
-"
+offset_left = 363.0
+offset_top = 559.0
+offset_right = 491.0
+offset_bottom = 687.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("25_ieted")
+texture_pressed = ExtResource("26_qrbu1")
+texture_hover = ExtResource("26_qrbu1")
 script = ExtResource("18_fw3uj")
 
 [node name="ending" type="ColorRect" parent="."]
@@ -1034,6 +1043,7 @@ grow_vertical = 0
 text = "SAIR"
 
 [node name="ZOOM" type="Node2D" parent="."]
+visible = false
 position = Vector2(-2, 6)
 
 [node name="rg" parent="ZOOM" instance=ExtResource("17_0v2ir")]

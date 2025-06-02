@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://bg8nrq1w2nuph"]
+
+[ext_resource type="Script" uid="uid://ctgmhiqo2fks0" path="res://scripts/b_aprovar.gd" id="1_msqr7"]
+
+[node name="b_aprovar" type="Button"]
+offset_left = 46.0
+offset_top = 617.0
+offset_right = 249.0
+offset_bottom = 680.0
+text = "APROVAR"
+script = ExtResource("1_msqr7")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

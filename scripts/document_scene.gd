@@ -1,7 +1,7 @@
 extends Panel
 
-@onready var botao_anterior: Button = $b_aprovar
-@onready var botao_proximo: Button = $b_reprovar
+@onready var botao_anterior: TextureButton = $b_aprovar
+@onready var botao_proximo: TextureButton = $b_reprovar
 @onready var sprite: AnimatedSprite2D = get_node("../SubViewportContainer/SubViewport/et")
 @onready var ending: ColorRect = $"../../ending"
 const NOVA_CENA = "res://cenas/proxima_etapa.tscn"
