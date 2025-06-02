@@ -18,7 +18,13 @@ DATA NAS.: 12/09/2000
 DATA EMISSÃO: 03/03/2020
 VALIDADE: 03/03/2030",
 
-				"blue-03": "RG 03 - Azul Escuro",
+				"blue-03": "TYAZAI ZYTHAR
+RG - 333.600-MR
+ETNIA - AZUL CLARO
+DATA NAS.: 30/11/1998
+DATA EMISSÃO: 22/01/2018
+VALIDADE: 22/01/2028
+",
 				"green-01": "RG 04 - Verde",
 				"purple-01": "RG 05 - Roxo",
 				"red-01": "RG 06 - Vermelho",
@@ -50,7 +56,17 @@ MODIFICAÇÕES GENÉTICAS REGISTRADAS: CHIFRUDO
 ETNIA DECLARADA: AZUL
 CÓDIGO BIOLÓMICO: MR-1124-TB",
 
-				"blue-03": "Certidão 03 - Azul Escuro",
+				"blue-03": "CERTIFICADO DE NASCIMENTO MARCIANO
+NOME: TYAZAI ZYTHAR
+DATA: 30/11/1998
+LOCAL: Zona central - Colônia Azul-1 
+
+FILIAÇÃO:
+- PORTADOR GENÉTICO 1: Zy'than Zythar (ETNIA AZUL)
+- PORTADOR GENÉTICO 2: Or'vax Zythar (VERMELHO CLARO)
+ETNIA DECLARADA: AZUL CLARO
+CÓDIGO BIOLÔMICO: MR-0001-DX",
+
 				"green-01": "Certidão 04 - Verde",
 				"purple-01": "Certidão 05 - Roxo",
 				"red-01": "Certidão 06 - Vermelho",
@@ -59,7 +75,8 @@ CÓDIGO BIOLÓMICO: MR-1124-TB",
 			"texturas": {
 				"blue-01": "res://assets/documents/certidao-nasc-002.png",
 				"blue-02": "res://assets/documents/certidao-nasc-004.png",
-				"blue-03": "res://assets/documents/certidao-nasc-003.png",
+				"blue-03": "res://assets/documents/certidao-nasc-004.png",
+				
 				"green-01": "res://assets/documents/certidao-nasc-004.png",
 				"purple-01": "res://assets/documents/certidao-nasc-001.png",
 				"red-01": "res://assets/documents/certidao-nasc-002.png",
@@ -84,6 +101,7 @@ Meu fenótipo é azul, como atesta meu selo epidermal.'
 ASSINATURA BIOMÉTRICA: (padrão de DNA verificado)
 DATA MARCIANA: 15/01/2025",
 
+
 				"blue-02": "FORMULÁRIO DE AUTOCLASSIFICAÇÃO ÉTNICA
 SOB PENA DE PERDA DE DIREITOS CIVIS POR FALSA DECLARAÇÃO
 
@@ -98,7 +116,22 @@ Justificativa:
 ASSINATURA BIOMÉTRICA: (padrão de DNA verificado)
 DATA MARCIANA: 16/01/2025",
 
-				"blue-03": "Declaração 03 - Azul Escuro",
+
+				"blue-03": "FORMULÁRIO DE AUTOCLASSIFICAÇÃO ÉTNICA
+SOB PENA DE PERDA DE DIREITOS CIVIS POR FALSA DECLARAÇÃO
+
+Eu, TYAZAI ZYTHAR, declaro sob juramento genético que:
+
+[X] OPTO pelo sistema de cotas para AZUIS (Art.7º)
+[X] OPTO pelo sistema de cotas para VERMELHOS (Art.12º)
+
+Justificativa: 
+'Meu código biolômico comprova ancestralidade azul e vermelha em conjunto.
+Por esse motivo desejo as duas cotas.'
+
+ASSINATURA BIOMÉTRICA: (padrão de DNA verificado)
+DATA MARCIANA: 15/01/2025",
+
 				"green-01": "Declaração 04 - Verde",
 				"purple-01": "Declaração 05 - Roxo",
 				"red-01": "Declaração 06 - Vermelho",
