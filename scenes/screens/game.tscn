@@ -1,4 +1,4 @@
-[gd_scene load_steps=144 format=3 uid="uid://bnj3012sgdq65"]
+[gd_scene load_steps=145 format=3 uid="uid://bnj3012sgdq65"]
 
 [ext_resource type="Script" uid="uid://dij8r2qps2ich" path="res://scripts/game.gd" id="1_a5hx5"]
 [ext_resource type="Texture2D" uid="uid://b1dftehnwae8k" path="res://assets/background.png" id="1_e0wmo"]
@@ -25,6 +25,7 @@
 [ext_resource type="Script" uid="uid://ctgmhiqo2fks0" path="res://scripts/b_aprovar.gd" id="17_2xi1w"]
 [ext_resource type="PackedScene" uid="uid://bxvm4kooiohjk" path="res://scenes/components/document_declaracao_zoom.tscn" id="18_2xi1w"]
 [ext_resource type="Script" uid="uid://bk6uwfla5akf1" path="res://scripts/b_reprovar.gd" id="18_fw3uj"]
+[ext_resource type="Texture2D" uid="uid://nw5hwuc2mwn1" path="res://assets/ferramenta-banca/mesa.png" id="18_ieted"]
 [ext_resource type="Script" uid="uid://beer7ol0bbhd6" path="res://scripts/ending.gd" id="19_fw3uj"]
 [ext_resource type="Texture2D" uid="uid://bq7tclnp83xsb" path="res://assets/ferramenta-banca/selo_positivo.png" id="24_4tvho"]
 [ext_resource type="PackedScene" uid="uid://uoro18rf0nxu" path="res://scenes/components/document_certidao_zoom.tscn" id="24_r6qep"]
@@ -884,16 +885,18 @@ dragging_enabled = false
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="HSplitContainer"]
 layout_mode = 2
+size_flags_stretch_ratio = 3.55
 
 [node name="SubViewport" type="SubViewport" parent="HSplitContainer/SubViewportContainer"]
 transparent_bg = true
 handle_input_locally = false
+size = Vector2i(712, 727)
 render_target_update_mode = 4
 
 [node name="et" type="AnimatedSprite2D" parent="HSplitContainer/SubViewportContainer/SubViewport"]
 show_behind_parent = true
-position = Vector2(342, 382)
-scale = Vector2(1.30029, 1.10352)
+position = Vector2(337, 373)
+scale = Vector2(1.30029, 1.22363)
 sprite_frames = SubResource("SpriteFrames_yqjtg")
 animation = &"blue-03"
 script = ExtResource("2_ln6eb")
@@ -901,15 +904,15 @@ script = ExtResource("2_ln6eb")
 [node name="RgButton" parent="HSplitContainer/SubViewportContainer/SubViewport" instance=ExtResource("3_0q6jn")]
 offset_left = 27.0
 offset_top = 29.0
-offset_right = 99.0
-offset_bottom = 109.0
+offset_right = 84.0
+offset_bottom = 63.0
 script = ExtResource("4_kauht")
 
 [node name="DeclaracaoButton" parent="HSplitContainer/SubViewportContainer/SubViewport" instance=ExtResource("5_yruvw")]
 offset_left = 17.0
 offset_top = 85.0
-offset_right = 145.0
-offset_bottom = 213.0
+offset_right = 97.0
+offset_bottom = 175.0
 script = ExtResource("6_vsgdc")
 
 [node name="CertidaoButton" parent="HSplitContainer/SubViewportContainer/SubViewport" instance=ExtResource("7_ggwlb")]
@@ -932,6 +935,13 @@ texture_pressed = ExtResource("11_s3n12")
 texture_hover = ExtResource("11_s3n12")
 script = ExtResource("12_thpfx")
 
+[node name="mesa" type="TextureRect" parent="HSplitContainer/SubViewportContainer/SubViewport"]
+offset_left = -1.0
+offset_top = 474.5
+offset_right = 688.0
+offset_bottom = 723.5
+texture = ExtResource("18_ieted")
+
 [node name="documents" type="Panel" parent="HSplitContainer"]
 layout_mode = 2
 script = ExtResource("3_4ji0l")
@@ -946,10 +956,10 @@ document_text = ""
 
 [node name="rg" parent="HSplitContainer/documents" instance=ExtResource("6_4ji0l")]
 layout_mode = 1
-offset_left = 44.0
-offset_top = 60.0
-offset_right = -325.0
-offset_bottom = -525.0
+offset_left = 40.0
+offset_top = 63.0
+offset_right = -329.0
+offset_bottom = -533.0
 document_text = ""
 
 [node name="declaracao" parent="HSplitContainer/documents" instance=ExtResource("4_o78e0")]
