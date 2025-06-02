@@ -19,7 +19,7 @@ func _ready():
 	animation_looped.connect(_on_animation_looped)
 	
 	await get_tree().create_timer(0.1).timeout
-	sortear_animacao()
+	#sortear_animacao()
 
 func sortear_animacao():
 	randomize()

@@ -30,10 +30,12 @@ func _ready():
 		animacoes_restantes = animacoes_disponiveis.duplicate()
 		animacoes_restantes.shuffle()
 
+		print(animacoes_restantes)
 		animacao_atual = animacoes_restantes[0]  # pega a primeira, mas não remove ainda
 		print("▶️ Primeira animação (inicial):", animacao_atual)
 		await _reiniciar_sprite(animacao_atual)
 		animacoes_restantes.remove_at(0)  # remove após exibir
+		
 	else:
 		push_error("❌ AnimatedSprite2D não encontrado no caminho especificado.")
 
@@ -50,7 +52,8 @@ func _trocar_animacao():
 		print("✅ Todas as animações foram exibidas. Indo para próxima cena.")
 		ending.show()
 		return
-
+	
+	print(animacoes_restantes)
 	var nova_animacao = animacoes_restantes.pop_front()
 	animacao_atual = nova_animacao
 	print("▶️ Nova animação:", animacao_atual)
