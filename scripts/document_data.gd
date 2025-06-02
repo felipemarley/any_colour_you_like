@@ -47,7 +47,14 @@ DATA NAS.: 22/02/2002
 DATA EMISSÃO: 31/10/2020
 VALIDADE: 31/10/2030
 ",
-				"yellow-01": "RG 07 - Amarelo"
+				"yellow-01": "AMAR ELO
+RG - 678.345-MR
+ETNIA - AMARELO 
+DATA NAS.: 30/02/2004
+DATA EMISSÃO: 31/12/2014
+VALIDADE: 31/12/2024
+"
+
 			},
 			
 			"texturas": {}
@@ -121,13 +128,24 @@ DATA: 22/02/2002
 LOCAL: Clinica Vila Xavo - Colonia Vermelha-999
 
 FILIAÇÃO:
-- PORTADOR GENÉTICO 1: Milai Godofredo (VERMELHOR)
+- PORTADOR GENÉTICO 1: Milai Godofredo (VERMELHO)
 - PORTADOR GENÉTICO 2: Jota Questi (VERMELHO ESCURO)
 MODIFICAÇÕES GENÉTICAS REGISTRADAS: Nenhuma
 ETNIA DECLARADA: ROXO
 CÓDIGO BIOLÔMICO: MR-2645-DX",
 
-				"yellow-01": "Certidão 07 - Amarelo"
+
+				"yellow-01": "CERTIFICADO DE NASCIMENTO MARCIANO
+NOME: AMAR ELO
+DATA: 30/02/2004
+LOCAL: Clinica Floft - Colonia Azul-9
+
+FILIAÇÃO:
+- PORTADOR GENÉTICO 1: Lianona Elo (VERDE)
+- PORTADOR GENÉTICO 2: Eliano Faro (VERMELHO)
+MODIFICAÇÕES GENÉTICAS REGISTRADAS: CIRCUFERENCIA CRANIANA AVANTAJADA
+ETNIA DECLARADA: AMARELO
+CÓDIGO BIOLÔMICO: MR-3768-DX"
 			},
 			"texturas": {
 				"blue-01": "res://assets/documents/certidao-nasc-002.png",
@@ -136,8 +154,7 @@ CÓDIGO BIOLÔMICO: MR-2645-DX",
 				"green-01": "res://assets/documents/certidao-nasc-002.png",
 				"purple-01": "res://assets/documents/certidao-nasc-004.png",
 				"red-01": "res://assets/documents/certidao-nasc-003.png",
-				
-				"yellow-01": "res://assets/documents/certidao-nasc-003.png"
+				"yellow-01": "res://assets/documents/certidao-nasc-001.png"
 			}
 		},
 		"declaracao": {
@@ -236,7 +253,21 @@ Justificativa:
 ASSINATURA BIOMÉTRICA: (padrão de DNA verificado)
 DATA MARCIANA: 15/01/2025",
 
-				"yellow-01": "Declaração 07 - Amarelo"
+
+				"yellow-01": "FORMULÁRIO DE AUTOCLASSIFICAÇÃO ÉTNICA
+SOB PENA DE PERDA DE DIREITOS CIVIS POR FALSA DECLARAÇÃO
+
+Eu, AMAR ELO, declaro sob juramento genético que:
+
+[ ] OPTO pelo sistema de cotas para AZUIS (Art.7º)
+[X] OPTO pelo sistema de cotas para VERMELHOS (Art.12º)
+
+Justificativa: 
+'Meu código biolômico comprova ancestralidade vermelha, 
+tenho parentesco de 1° grau com uma pessoa vermelha.'
+
+ASSINATURA BIOMÉTRICA: (padrão de DNA verificado)
+DATA MARCIANA: 15/01/2025"
 			},
 			"texturas": {}
 		}
