@@ -40,9 +40,16 @@ DATA NAS.: 10/05/2000
 DATA EMISSÃO: 30/09/2018
 VALIDADE: 30/09/2028
 ",
-				"red-01": "RG 06 - Vermelho",
+				"red-01": "MAXARI GODOFREDO
+RG - 234.232-MR
+ETNIA - VERMELHO ESCURO 
+DATA NAS.: 22/02/2002
+DATA EMISSÃO: 31/10/2020
+VALIDADE: 31/10/2030
+",
 				"yellow-01": "RG 07 - Amarelo"
 			},
+			
 			"texturas": {}
 		},
 		"certidao": {
@@ -61,7 +68,7 @@ CÓDIGO BIOLÓMICO: MR-0092-XT",
 				"blue-02": "CERTIFICADO DE NASCIMENTO MARCIANO
 NOME: RICHARDESO POLES
 DATA: 12/09/2000
-LOCAL: Zona de Pesca - Colônia Azul-3 
+LOCAL: Hospital da Zona de Pesca - Colônia Azul-3 
 FILIAÇÃO:
 - PORTADOR GENÉTICO 1: Vardemir Poles (ETNIA AZUL ESCURO)
 - PORTADOR GENÉTICO 2: Myantia Klyth (ETNIA AZUL CLARO)
@@ -72,41 +79,54 @@ CÓDIGO BIOLÓMICO: MR-1124-TB",
 				"blue-03": "CERTIFICADO DE NASCIMENTO MARCIANO
 NOME: TYAZAI ZYTHAR
 DATA: 30/11/1998
-LOCAL: Zona central - Colônia Azul-1 
+LOCAL: Clinica da Zona central - Colônia Azul-1 
 
 FILIAÇÃO:
 - PORTADOR GENÉTICO 1: Zy'than Zythar (ETNIA AZUL)
 - PORTADOR GENÉTICO 2: Orlsa Zythar (VERMELHO CLARO)
 MODIFICAÇÕES GENÉTICAS REGISTRADAS: Nenhuma
 ETNIA DECLARADA: AZUL CLARO
-CÓDIGO BIOLÔMICO: MR-0001-DX",
+CÓDIGO BIOLÔMICO: MR-1234-DX",
 
 				"green-01": "CERTIFICADO DE NASCIMENTO MARCIANO
 NOME: FILTROPINO PINO
 DATA: 05/05/2005
-LOCAL: Sul da colonia - Colônia Verde-1 
+LOCAL: Hospital Sul da colonia - Colônia Verde-1 
 
 FILIAÇÃO:
 - PORTADOR GENÉTICO 1: Xerox Qirn (VERDE)
 - PORTADOR GENÉTICO 2: In'dex Pino (VERDE CLARO)
 MODIFICAÇÕES GENÉTICAS REGISTRADAS: Nenhuma
 ETNIA DECLARADA: VERDE
-CÓDIGO BIOLÔMICO: MR-0001-DX",
+CÓDIGO BIOLÔMICO: MR-9865-DX",
 
 
 				"purple-01": "CERTIFICADO DE NASCIMENTO MARCIANO
 NOME: ROXIANO PLINIO
 DATA: 10/05/2000
-LOCAL: Zoneamento da zona Z - Nova Colonia Vermelha
+LOCAL: Hopital da zona Z - Nova Colonia Vermelha
 
 FILIAÇÃO:
 - PORTADOR GENÉTICO 1: Souza Plinio (AZUL)
 - PORTADOR GENÉTICO 2: Digidigidigi e (VERMELHO ESCURO)
 MODIFICAÇÕES GENÉTICAS REGISTRADAS: Nenhuma
 ETNIA DECLARADA: ROXO
-CÓDIGO BIOLÔMICO: MR-0001-DX",
+CÓDIGO BIOLÔMICO: MR-3456-DX",
 
-				"red-01": "Certidão 06 - Vermelho",
+
+
+				"red-01": "CERTIFICADO DE NASCIMENTO MARCIANO
+NOME: MAXARI GODOFREDO
+DATA: 22/02/2002
+LOCAL: Clinica Vila Xavo - Colonia Vermelha-999
+
+FILIAÇÃO:
+- PORTADOR GENÉTICO 1: Milai Godofredo (VERMELHOR)
+- PORTADOR GENÉTICO 2: Jota Questi (VERMELHO ESCURO)
+MODIFICAÇÕES GENÉTICAS REGISTRADAS: Nenhuma
+ETNIA DECLARADA: ROXO
+CÓDIGO BIOLÔMICO: MR-2645-DX",
+
 				"yellow-01": "Certidão 07 - Amarelo"
 			},
 			"texturas": {
@@ -115,8 +135,8 @@ CÓDIGO BIOLÔMICO: MR-0001-DX",
 				"blue-03": "res://assets/documents/certidao-nasc-004.png",
 				"green-01": "res://assets/documents/certidao-nasc-002.png",
 				"purple-01": "res://assets/documents/certidao-nasc-004.png",
+				"red-01": "res://assets/documents/certidao-nasc-003.png",
 				
-				"red-01": "res://assets/documents/certidao-nasc-002.png",
 				"yellow-01": "res://assets/documents/certidao-nasc-003.png"
 			}
 		},
@@ -201,7 +221,21 @@ mas escolho a cota vermelha por ter nascido em uma região vermelha.'
 ASSINATURA BIOMÉTRICA: (padrão de DNA verificado)
 DATA MARCIANA: 15/01/2025",
 
-				"red-01": "Declaração 06 - Vermelho",
+
+				"red-01": "FORMULÁRIO DE AUTOCLASSIFICAÇÃO ÉTNICA
+SOB PENA DE PERDA DE DIREITOS CIVIS POR FALSA DECLARAÇÃO
+
+Eu, MAXARI GODOFREDO, declaro sob juramento genético que:
+
+[ ] OPTO pelo sistema de cotas para AZUIS (Art.7º)
+[X] OPTO pelo sistema de cotas para VERMELHOS (Art.12º)
+
+Justificativa: 
+'Eu sou vermelho.'
+
+ASSINATURA BIOMÉTRICA: (padrão de DNA verificado)
+DATA MARCIANA: 15/01/2025",
+
 				"yellow-01": "Declaração 07 - Amarelo"
 			},
 			"texturas": {}
