@@ -898,7 +898,7 @@ show_behind_parent = true
 position = Vector2(337, 373)
 scale = Vector2(1.30029, 1.22363)
 sprite_frames = SubResource("SpriteFrames_yqjtg")
-animation = &"blue-03"
+animation = &"green-01"
 script = ExtResource("2_ln6eb")
 
 [node name="RgButton" parent="HSplitContainer/SubViewportContainer/SubViewport" instance=ExtResource("3_0q6jn")]
