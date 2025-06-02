@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://d01c0h8jplhye"]
+
+[ext_resource type="Script" uid="uid://71kh8v01rvbk" path="res://scripts/document_standard.gd" id="1_hagfo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eyh3l"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="DocumentTest" type="Panel"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_eyh3l")
+script = ExtResource("1_hagfo")
+document_text = "RICHARDESO DAZUAKER POLES
+RG - 111.222.444
+CEF - 0921012912"
+text_path = NodePath("RichTextLabel")
+metadata/_custom_type_script = "uid://71kh8v01rvbk"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 42
+fit_content = true
+vertical_alignment = 1

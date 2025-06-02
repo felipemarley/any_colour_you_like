@@ -1,4 +1,4 @@
-[gd_scene load_steps=72 format=3 uid="uid://bnj3012sgdq65"]
+[gd_scene load_steps=68 format=3 uid="uid://bnj3012sgdq65"]
 
 [ext_resource type="Texture2D" uid="uid://b1dftehnwae8k" path="res://assets/background.png" id="1_e0wmo"]
 [ext_resource type="Texture2D" uid="uid://dh8jyycca2rmo" path="res://assets/aliens/alien-green-001.png" id="2_e0wmo"]
@@ -14,11 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://c4escptl3u4if" path="res://scenes/components/document_rg.tscn" id="6_4ji0l"]
 [ext_resource type="Script" uid="uid://dyhceg4w7pma5" path="res://scripts/declaracao_button.gd" id="6_vsgdc"]
 [ext_resource type="PackedScene" uid="uid://bgpnodm1qguo7" path="res://scenes/components/certidao_button.tscn" id="7_ggwlb"]
-[ext_resource type="Texture2D" uid="uid://ban5hlthsrbfa" path="res://assets/ferramenta-banca/lupa64x64.png" id="11_s3n12"]
-[ext_resource type="Script" uid="uid://dv13ikt5dlkro" path="res://scripts/lupa.gd" id="12_thpfx"]
-[ext_resource type="PackedScene" uid="uid://d01c0h8jplhye" path="res://scenes/components/document_rg_zoom.tscn" id="17_0v2ir"]
-[ext_resource type="PackedScene" uid="uid://bxvm4kooiohjk" path="res://scenes/components/document_declaracao_zoom.tscn" id="18_2xi1w"]
-[ext_resource type="PackedScene" uid="uid://uoro18rf0nxu" path="res://scenes/components/document_certidao_zoom.tscn" id="19_fw3uj"]
+[ext_resource type="PackedScene" uid="uid://2sikjgedycn7" path="res://scenes/components/lupa.tscn" id="11_s3n12"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0lfbs"]
 atlas = ExtResource("2_oni8f")
@@ -408,7 +404,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-metadata/_edit_vertical_guides_ = [210.0]
 
 [node name="Background" type="TextureRect" parent="."]
 layout_mode = 1
@@ -464,20 +459,11 @@ offset_left = 11.0
 offset_top = 193.0
 offset_right = 116.0
 offset_bottom = 262.0
-pivot_offset = Vector2(59, 37)
 script = SubResource("GDScript_ggwlb")
 
-[node name="Lupa" type="TextureButton" parent="HSplitContainer/SubViewportContainer/SubViewport"]
-offset_left = 21.0
-offset_top = 273.0
-offset_right = 85.0
-offset_bottom = 337.0
-pivot_offset = Vector2(41, 25)
-mouse_default_cursor_shape = 2
-texture_normal = ExtResource("11_s3n12")
-texture_pressed = ExtResource("11_s3n12")
-texture_hover = ExtResource("11_s3n12")
-script = ExtResource("12_thpfx")
+[node name="Lupa" parent="HSplitContainer/SubViewportContainer/SubViewport" instance=ExtResource("11_s3n12")]
+position = Vector2(58, 297)
+scale = Vector2(0.0525, 0.0510938)
 
 [node name="documents" type="Panel" parent="HSplitContainer"]
 layout_mode = 2
@@ -485,17 +471,17 @@ script = ExtResource("3_4ji0l")
 
 [node name="certidao" parent="HSplitContainer/documents" instance=ExtResource("5_ln6eb")]
 layout_mode = 1
-offset_left = 286.0
-offset_top = 483.0
-offset_right = -29.0
-offset_bottom = -74.0
+offset_left = 265.0
+offset_top = 486.0
+offset_right = -56.0
+offset_bottom = -61.0
 
 [node name="rg" parent="HSplitContainer/documents" instance=ExtResource("6_4ji0l")]
 layout_mode = 1
 offset_left = 31.0
-offset_top = 384.0
+offset_top = 475.0
 offset_right = -338.0
-offset_bottom = -201.0
+offset_bottom = -110.0
 document_text = "RICHARDESO DAZUAKER POLES
 RG - 111.222.444
 CEF - 0921012912
@@ -509,30 +495,8 @@ anchor_bottom = 1.0
 offset_left = 258.0
 offset_top = 70.0
 offset_right = -85.0
-offset_bottom = -338.0
+offset_bottom = -300.0
 document_text = "DECLARO PARA OS DEVIDOS FINS QUE RICHARDESO É VERDE E TEM ACESSO À COTA E A SER ESTUDANTE DA UFRM"
-
-[node name="ZOOM" type="Node2D" parent="."]
-position = Vector2(-2, 6)
-
-[node name="rg" parent="ZOOM" instance=ExtResource("17_0v2ir")]
-offset_left = 204.0
-offset_top = 55.0
-offset_right = 626.0
-offset_bottom = 279.0
-
-[node name="declaracao" parent="ZOOM" instance=ExtResource("18_2xi1w")]
-offset_left = 394.0
-offset_top = 143.0
-offset_right = 713.0
-offset_bottom = 554.0
-document_text = "DECLARO PARA OS DEVIDOS FINS QUE RICHARDESO É VERDE E TEM ACESSO À COTA E A SER ESTUDANTE DA UFRM"
-
-[node name="certidao" parent="ZOOM" instance=ExtResource("19_fw3uj")]
-offset_left = 106.0
-offset_top = 302.0
-offset_right = 590.0
-offset_bottom = 682.0
 
 [connection signal="pressed" from="HSplitContainer/SubViewportContainer/SubViewport/RgButton" to="HSplitContainer/SubViewportContainer/SubViewport/RgButton" method="_on_pressed"]
 [connection signal="pressed" from="HSplitContainer/SubViewportContainer/SubViewport/DeclaracaoButton" to="HSplitContainer/SubViewportContainer/SubViewport/DeclaracaoButton" method="_on_pressed"]

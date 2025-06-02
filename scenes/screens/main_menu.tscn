@@ -39,7 +39,6 @@ func _on_bttn_voltar_das_configs_pressed() -> void:
 	_ready()
 "
 
-
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_ekxnf"]
 color = Color(1, 1, 1, 1)
 thickness = 4
@@ -63,7 +62,6 @@ func _on_value_changed(value: float) -> void:
 	AudioServer.set_bus_volume_db(audio_bus_id, db)
 "
 
-
 [node name="main_menu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -72,7 +70,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = SubResource("GDScript_idsrk")
-
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -229,7 +226,6 @@ max_value = 1.0
 step = 0.05
 value = 1.0
 script = SubResource("GDScript_5weqt")
-
 audio_bus_name = "Music"
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="painel_configuracoes/VBoxContainer"]
@@ -251,7 +247,6 @@ max_value = 1.0
 step = 0.05
 value = 1.0
 script = SubResource("GDScript_5weqt")
-
 audio_bus_name = "SFX"
 
 [node name="AudioMusic" type="AudioStreamPlayer2D" parent="."]

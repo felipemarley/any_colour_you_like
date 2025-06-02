@@ -1,5 +1,6 @@
-class_name Document
 extends Panel
+
+var base_zoom = 1.0
 
 @export_multiline var document_text: = ""
 @export_node_path("RichTextLabel") var text_path: NodePath = ""
