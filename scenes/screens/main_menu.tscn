@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://kljk7yp3h8o2" path="res://assets/background/capa.png" id="1_tgk1t"]
 [ext_resource type="Script" uid="uid://bhb3gsxn88cgq" path="res://scripts/pular_intro.gd" id="2_idsrk"]
+
 [ext_resource type="AudioStream" uid="uid://brs1k6x2vupou" path="res://assets/sounds/space-bass-loop.wav" id="3_5weqt"]
 
 [sub_resource type="GDScript" id="GDScript_idsrk"]
@@ -74,6 +75,7 @@ grow_vertical = 2
 script = SubResource("GDScript_idsrk")
 
 [node name="Capa" type="TextureRect" parent="."]
+
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -96,7 +98,7 @@ offset_bottom = 91.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_constants/margin_left = 400
-theme_override_constants/margin_top = 250
+theme_override_constants/margin_top = 150
 theme_override_constants/margin_right = 400
 theme_override_constants/margin_bottom = 250
 
@@ -108,6 +110,7 @@ alignment = 2
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/MainButtons"]
 layout_mode = 2
 theme_override_constants/margin_top = 100
+
 
 [node name="iniciar" type="Button" parent="MarginContainer/MainButtons"]
 layout_mode = 2
@@ -141,10 +144,11 @@ anchors_preset = 14
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_top = -34.0
-offset_bottom = 34.0
+offset_top = -80.0
+offset_bottom = 131.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 20
 bbcode_enabled = true
 text = "DESENVOLVEDORES 
 
@@ -153,6 +157,7 @@ MARINA TORRES
 CICERO PAULINO
 MARCOS GONCALVES
 YVES PABLO"
+
 fit_content = true
 horizontal_alignment = 1
 
@@ -172,6 +177,7 @@ grow_vertical = 0
 text = "VOLTAR"
 
 [node name="painel_configuracoes" type="Panel" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5

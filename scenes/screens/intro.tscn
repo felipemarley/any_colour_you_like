@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://12d266m3xcur"]
+[gd_scene load_steps=36 format=3 uid="uid://0bmg2jw4kxv0"]
 
 [ext_resource type="Texture2D" uid="uid://d255kmf3oexr6" path="res://assets/cutscene/sky.jpg" id="1_dostf"]
 [ext_resource type="Texture2D" uid="uid://b0tdc0ad1g44c" path="res://assets/cutscene/bancada.jpg" id="2_fsi4a"]
@@ -1581,7 +1581,7 @@ grow_vertical = 2
 theme_override_font_sizes/bold_italics_font_size = 1
 theme_override_font_sizes/normal_font_size = 42
 bbcode_enabled = true
-text = "Vermelhos e azuis se uniram... E a insureição vermelha surgiu"
+text = "Vermelhos e azuis se uniram... E a insurreição vermelha surgiu"
 horizontal_alignment = 1
 
 [node name="dialogo-8" type="RichTextLabel" parent="."]
