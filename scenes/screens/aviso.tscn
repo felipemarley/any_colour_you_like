@@ -1,0 +1,86 @@
+[gd_scene load_steps=5 format=3 uid="uid://dcjmo1qhgxwis"]
+
+[ext_resource type="Script" uid="uid://du0dy7cmiv82y" path="res://scripts/aviso.gd" id="1_aiqs3"]
+
+[sub_resource type="Animation" id="Animation_fgoe8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RichTextLabel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_4ghir"]
+resource_name = "entrada-aviso"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RichTextLabel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.233333, 0.98, 4, 4.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_va0uh"]
+_data = {
+&"RESET": SubResource("Animation_fgoe8"),
+&"entrada-aviso": SubResource("Animation_4ghir")
+}
+
+[node name="Aviso" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="animation" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_va0uh")
+}
+autoplay = "entrada-aviso"
+script = ExtResource("1_aiqs3")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 144.0
+offset_top = -115.0
+offset_right = -128.0
+offset_bottom = 173.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 24
+text = "AVISO LEGAL
+
+Este jogo é uma obra de ficção e sátira. Todas as personagens, documentos e situações apresentadas são fruto da imaginação dos desenvolvedores.
+
+Qualquer semelhança com pessoas reais, instituições ou documentos oficiais é mera coincidência e não intencional.
+
+Este conteúdo não deve ser interpretado como representação precisa da realidade."
+horizontal_alignment = 1
