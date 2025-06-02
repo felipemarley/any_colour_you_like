@@ -1,5 +1,6 @@
 [gd_scene load_steps=109 format=3 uid="uid://bnj3012sgdq65"]
 
+
 [ext_resource type="Texture2D" uid="uid://b1dftehnwae8k" path="res://assets/background.png" id="1_e0wmo"]
 [ext_resource type="Texture2D" uid="uid://dh8jyycca2rmo" path="res://assets/aliens/alien-green-001.png" id="2_e0wmo"]
 [ext_resource type="Script" uid="uid://1xjq4y0pujq4" path="res://scripts/et.gd" id="2_ln6eb"]
@@ -16,9 +17,16 @@
 [ext_resource type="Texture2D" uid="uid://d5yexutdnfxx" path="res://assets/aliens/alien-yellow-001.png" id="6_thpfx"]
 [ext_resource type="Script" uid="uid://dyhceg4w7pma5" path="res://scripts/declaracao_button.gd" id="6_vsgdc"]
 [ext_resource type="PackedScene" uid="uid://bgpnodm1qguo7" path="res://scenes/components/certidao_button.tscn" id="7_ggwlb"]
+
 [ext_resource type="Script" uid="uid://ctgmhiqo2fks0" path="res://scripts/b_aprovar.gd" id="17_2xi1w"]
 [ext_resource type="Script" uid="uid://bk6uwfla5akf1" path="res://scripts/b_reprovar.gd" id="18_fw3uj"]
 [ext_resource type="Script" uid="uid://beer7ol0bbhd6" path="res://scripts/ending.gd" id="19_fw3uj"]
+[ext_resource type="Texture2D" uid="uid://ban5hlthsrbfa" path="res://assets/ferramenta-banca/lupa64x64.png" id="11_s3n12"]
+[ext_resource type="Script" uid="uid://dv13ikt5dlkro" path="res://scripts/lupa.gd" id="12_thpfx"]
+[ext_resource type="PackedScene" uid="uid://d01c0h8jplhye" path="res://scenes/components/document_rg_zoom.tscn" id="17_0v2ir"]
+[ext_resource type="PackedScene" uid="uid://bxvm4kooiohjk" path="res://scenes/components/document_declaracao_zoom.tscn" id="18_2xi1w"]
+[ext_resource type="PackedScene" uid="uid://uoro18rf0nxu" path="res://scenes/components/document_certidao_zoom.tscn" id="19_fw3uj"]
+
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0lfbs"]
 atlas = ExtResource("2_oni8f")
@@ -677,6 +685,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+metadata/_edit_vertical_guides_ = [210.0]
 
 [node name="Background" type="TextureRect" parent="."]
 layout_mode = 1
@@ -732,7 +741,20 @@ offset_left = 11.0
 offset_top = 193.0
 offset_right = 116.0
 offset_bottom = 262.0
+pivot_offset = Vector2(59, 37)
 script = SubResource("GDScript_ggwlb")
+
+[node name="Lupa" type="TextureButton" parent="HSplitContainer/SubViewportContainer/SubViewport"]
+offset_left = 21.0
+offset_top = 273.0
+offset_right = 85.0
+offset_bottom = 337.0
+pivot_offset = Vector2(41, 25)
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("11_s3n12")
+texture_pressed = ExtResource("11_s3n12")
+texture_hover = ExtResource("11_s3n12")
+script = ExtResource("12_thpfx")
 
 [node name="documents" type="Panel" parent="HSplitContainer"]
 layout_mode = 2
@@ -740,6 +762,7 @@ script = ExtResource("3_4ji0l")
 
 [node name="certidao" parent="HSplitContainer/documents" instance=ExtResource("5_ln6eb")]
 layout_mode = 1
+
 offset_left = 86.0
 offset_top = 256.0
 offset_right = -348.0
@@ -761,6 +784,7 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+
 offset_left = 287.0
 offset_top = 31.0
 offset_right = -11.0
@@ -841,6 +865,29 @@ offset_bottom = 221.88
 grow_horizontal = 2
 grow_vertical = 2
 text = "SAIR"
+
+[node name="ZOOM" type="Node2D" parent="."]
+position = Vector2(-2, 6)
+
+[node name="rg" parent="ZOOM" instance=ExtResource("17_0v2ir")]
+offset_left = 204.0
+offset_top = 55.0
+offset_right = 626.0
+offset_bottom = 279.0
+
+[node name="declaracao" parent="ZOOM" instance=ExtResource("18_2xi1w")]
+offset_left = 394.0
+offset_top = 143.0
+offset_right = 713.0
+offset_bottom = 554.0
+document_text = "DECLARO PARA OS DEVIDOS FINS QUE RICHARDESO É VERDE E TEM ACESSO À COTA E A SER ESTUDANTE DA UFRM"
+
+[node name="certidao" parent="ZOOM" instance=ExtResource("19_fw3uj")]
+offset_left = 106.0
+offset_top = 302.0
+offset_right = 590.0
+offset_bottom = 682.0
+
 
 [connection signal="pressed" from="HSplitContainer/SubViewportContainer/SubViewport/RgButton" to="HSplitContainer/SubViewportContainer/SubViewport/RgButton" method="_on_pressed"]
 [connection signal="pressed" from="HSplitContainer/SubViewportContainer/SubViewport/DeclaracaoButton" to="HSplitContainer/SubViewportContainer/SubViewport/DeclaracaoButton" method="_on_pressed"]
