@@ -24,3 +24,14 @@ window/stretch/mode="canvas_items"
 [gui]
 
 theme/custom_font="uid://b0fxyj22m7n40"
+
+[shader_globals]
+
+aprovados={
+"type": "int",
+"value": 0
+}
+reprovados={
+"type": "int",
+"value": 0
+}

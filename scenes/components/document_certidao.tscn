@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://dq4kmy5v48yay"]
+[gd_scene load_steps=4 format=3 uid="uid://dq4kmy5v48yay"]
 
 [ext_resource type="Script" uid="uid://71kh8v01rvbk" path="res://scripts/document_standard.gd" id="1_gm5gh"]
+[ext_resource type="Texture2D" uid="uid://r8jklq7bpg05" path="res://assets/documents/certidao-nasc-002.png" id="2_44n2c"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eyh3l"]
 bg_color = Color(1, 1, 1, 1)
@@ -9,6 +10,9 @@ bg_color = Color(1, 1, 1, 1)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 44.0
+offset_right = -434.0
+offset_bottom = 306.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_eyh3l")
@@ -16,6 +20,20 @@ script = ExtResource("1_gm5gh")
 document_text = "RICHARDESO NASCEU EM 301X NO DIA 15/10/301X E ELE É VERDE "
 text_path = NodePath("RichTextLabel")
 metadata/_custom_type_script = "uid://71kh8v01rvbk"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -31.0
+offset_top = -22.0
+offset_right = 42.0
+offset_bottom = 33.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_44n2c")
+expand_mode = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 layout_mode = 1
