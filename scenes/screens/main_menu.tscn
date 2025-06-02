@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://c88jviheskobs"]
+[gd_scene load_steps=8 format=3 uid="uid://c88jviheskobs"]
 
 [ext_resource type="Texture2D" uid="uid://kljk7yp3h8o2" path="res://assets/background/capa.png" id="1_tgk1t"]
+[ext_resource type="Script" uid="uid://bhb3gsxn88cgq" path="res://scripts/pular_intro.gd" id="2_idsrk"]
 [ext_resource type="AudioStream" uid="uid://brs1k6x2vupou" path="res://assets/sounds/space-bass-loop.wav" id="3_5weqt"]
 
 [sub_resource type="GDScript" id="GDScript_idsrk"]
@@ -171,7 +172,6 @@ grow_vertical = 0
 text = "VOLTAR"
 
 [node name="painel_configuracoes" type="Panel" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -260,6 +260,18 @@ value = 1.0
 script = SubResource("GDScript_5weqt")
 audio_bus_name = "SFX"
 
+[node name="HBoxContainer3" type="HBoxContainer" parent="painel_configuracoes/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 23
+
+[node name="Label" type="Label" parent="painel_configuracoes/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+text = "Pular Cutscene"
+
+[node name="pular_intro" type="CheckButton" parent="painel_configuracoes/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+script = ExtResource("2_idsrk")
+
 [node name="AudioMusic" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_5weqt")
 autoplay = true
@@ -273,3 +285,4 @@ bus = &"Music"
 [connection signal="pressed" from="painel_configuracoes/bttn_voltar" to="." method="_on_bttn_voltar_das_configs_pressed"]
 [connection signal="value_changed" from="painel_configuracoes/VBoxContainer/HBoxContainer/MusicControl" to="painel_configuracoes/VBoxContainer/HBoxContainer/MusicControl" method="_on_value_changed"]
 [connection signal="value_changed" from="painel_configuracoes/VBoxContainer/HBoxContainer2/SFXControl" to="painel_configuracoes/VBoxContainer/HBoxContainer2/SFXControl" method="_on_value_changed"]
+[connection signal="toggled" from="painel_configuracoes/VBoxContainer/HBoxContainer3/pular_intro" to="painel_configuracoes/VBoxContainer/HBoxContainer3/pular_intro" method="_on_toggled"]

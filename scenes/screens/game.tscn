@@ -892,7 +892,7 @@ render_target_update_mode = 4
 
 [node name="et" type="AnimatedSprite2D" parent="HSplitContainer/SubViewportContainer/SubViewport"]
 show_behind_parent = true
-position = Vector2(326, 382)
+position = Vector2(342, 382)
 scale = Vector2(1.30029, 1.10352)
 sprite_frames = SubResource("SpriteFrames_yqjtg")
 animation = &"blue-03"
@@ -1043,7 +1043,6 @@ grow_vertical = 0
 text = "SAIR"
 
 [node name="ZOOM" type="Node2D" parent="."]
-visible = false
 position = Vector2(-2, 6)
 
 [node name="rg" parent="ZOOM" instance=ExtResource("17_0v2ir")]

@@ -7,4 +7,7 @@ func _ready() -> void:
 
 func _on_animation_finished(anim_name: String):
 	if anim_name == "entrada-aviso":
-		get_tree().change_scene_to_file("res://scenes/screens/intro.tscn")
+		if Global.pular_intro == false:
+			get_tree().change_scene_to_file("res://scenes/screens/intro.tscn")
+		else:
+			get_tree().change_scene_to_file("res://scenes/screens/game.tscn")
