@@ -1037,23 +1037,24 @@ text = "SAIR"
 position = Vector2(-2, 6)
 
 [node name="rg" parent="ZOOM" instance=ExtResource("17_0v2ir")]
-offset_left = 204.0
-offset_top = 55.0
-offset_right = 626.0
-offset_bottom = 279.0
+offset_left = 273.0
+offset_top = 18.0
+offset_right = 666.0
+offset_bottom = 282.0
+document_text = ""
 
 [node name="declaracao" parent="ZOOM" instance=ExtResource("18_2xi1w")]
-offset_left = 394.0
-offset_top = 143.0
-offset_right = 713.0
-offset_bottom = 554.0
-document_text = "DECLARO PARA OS DEVIDOS FINS QUE RICHARDESO É VERDE E TEM ACESSO À COTA E A SER ESTUDANTE DA UFRM"
+offset_left = 571.0
+offset_top = 59.0
+offset_right = 1074.0
+offset_bottom = 655.0
 
 [node name="certidao" parent="ZOOM" instance=ExtResource("24_r6qep")]
-offset_left = 106.0
-offset_top = 302.0
-offset_right = 590.0
-offset_bottom = 682.0
+offset_left = 67.0
+offset_top = 76.0
+offset_right = 511.0
+offset_bottom = 614.0
+document_text = ""
 
 [connection signal="pressed" from="HSplitContainer/SubViewportContainer/SubViewport/RgButton" to="HSplitContainer/SubViewportContainer/SubViewport/RgButton" method="_on_pressed"]
 [connection signal="pressed" from="HSplitContainer/SubViewportContainer/SubViewport/DeclaracaoButton" to="HSplitContainer/SubViewportContainer/SubViewport/DeclaracaoButton" method="_on_pressed"]
