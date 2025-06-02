@@ -1,4 +1,4 @@
-[gd_scene load_steps=106 format=3 uid="uid://bnj3012sgdq65"]
+[gd_scene load_steps=109 format=3 uid="uid://bnj3012sgdq65"]
 
 [ext_resource type="Texture2D" uid="uid://b1dftehnwae8k" path="res://assets/background.png" id="1_e0wmo"]
 [ext_resource type="Texture2D" uid="uid://dh8jyycca2rmo" path="res://assets/aliens/alien-green-001.png" id="2_e0wmo"]
@@ -16,6 +16,9 @@
 [ext_resource type="Texture2D" uid="uid://d5yexutdnfxx" path="res://assets/aliens/alien-yellow-001.png" id="6_thpfx"]
 [ext_resource type="Script" uid="uid://dyhceg4w7pma5" path="res://scripts/declaracao_button.gd" id="6_vsgdc"]
 [ext_resource type="PackedScene" uid="uid://bgpnodm1qguo7" path="res://scenes/components/certidao_button.tscn" id="7_ggwlb"]
+[ext_resource type="Script" uid="uid://ctgmhiqo2fks0" path="res://scripts/b_aprovar.gd" id="17_2xi1w"]
+[ext_resource type="Script" uid="uid://bk6uwfla5akf1" path="res://scripts/b_reprovar.gd" id="18_fw3uj"]
+[ext_resource type="Script" uid="uid://beer7ol0bbhd6" path="res://scripts/ending.gd" id="19_fw3uj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0lfbs"]
 atlas = ExtResource("2_oni8f")
@@ -771,6 +774,7 @@ offset_top = 617.0
 offset_right = 249.0
 offset_bottom = 680.0
 text = "APROVAR"
+script = ExtResource("17_2xi1w")
 
 [node name="b_reprovar" type="Button" parent="HSplitContainer/documents"]
 layout_mode = 0
@@ -780,7 +784,68 @@ offset_right = 505.0
 offset_bottom = 680.0
 text = "REPROVAR
 "
+script = ExtResource("18_fw3uj")
+
+[node name="ending" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+script = ExtResource("19_fw3uj")
+
+[node name="texto_resumo_final" type="RichTextLabel" parent="ending"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -34.0
+offset_bottom = 34.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "FIM DE JOGO"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="voltar" type="Button" parent="ending"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -31.5
+offset_top = -146.0
+offset_right = 31.5
+offset_bottom = -121.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "VOLTAR PARA MENU"
+
+[node name="sair" type="Button" parent="ending"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.571
+anchor_right = 0.5
+anchor_bottom = 0.571
+offset_left = -20.0
+offset_top = 196.88
+offset_right = 22.0
+offset_bottom = 221.88
+grow_horizontal = 2
+grow_vertical = 2
+text = "SAIR"
 
 [connection signal="pressed" from="HSplitContainer/SubViewportContainer/SubViewport/RgButton" to="HSplitContainer/SubViewportContainer/SubViewport/RgButton" method="_on_pressed"]
 [connection signal="pressed" from="HSplitContainer/SubViewportContainer/SubViewport/DeclaracaoButton" to="HSplitContainer/SubViewportContainer/SubViewport/DeclaracaoButton" method="_on_pressed"]
 [connection signal="pressed" from="HSplitContainer/SubViewportContainer/SubViewport/CertidaoButton" to="HSplitContainer/SubViewportContainer/SubViewport/CertidaoButton" method="_on_pressed"]
+[connection signal="pressed" from="HSplitContainer/documents/b_aprovar" to="HSplitContainer/documents/b_aprovar" method="_on_pressed"]
+[connection signal="pressed" from="HSplitContainer/documents/b_reprovar" to="HSplitContainer/documents/b_reprovar" method="_on_pressed"]
+[connection signal="pressed" from="ending/voltar" to="ending" method="_on_voltar_pressed"]
+[connection signal="pressed" from="ending/sair" to="ending" method="_on_sair_pressed"]
