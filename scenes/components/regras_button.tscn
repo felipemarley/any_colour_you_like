@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://cyaglc6bc3xwc"]
+
+[ext_resource type="Texture2D" uid="uid://cli7fnghu1if" path="res://assets/ferramenta-banca/regras-icon.png" id="1_tiful"]
+[ext_resource type="Texture2D" uid="uid://pg7effobhaq7" path="res://assets/ferramenta-banca/regras-icon-hover.png" id="2_e0pfg"]
+
+[node name="RegrasButton" type="TextureButton"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("1_tiful")
+texture_pressed = ExtResource("2_e0pfg")
+texture_hover = ExtResource("2_e0pfg")

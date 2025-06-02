@@ -1,0 +1,93 @@
+[gd_scene load_steps=4 format=3 uid="uid://bsxkdbxt4nweq"]
+
+[ext_resource type="Script" uid="uid://71kh8v01rvbk" path="res://scripts/document_standard.gd" id="1_s5ybh"]
+[ext_resource type="Texture2D" uid="uid://b2wgi7ahco1cf" path="res://assets/documents/regras.png" id="2_s5ybh"]
+[ext_resource type="Script" uid="uid://btpltqff4srww" path="res://scripts/regras_button.gd" id="3_xd8c6"]
+
+[node name="DocumentTest" type="Panel"]
+anchors_preset = -1
+anchor_right = 0.169
+anchor_bottom = 0.371
+offset_right = 287.68
+offset_bottom = 329.88
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_s5ybh")
+text_path = NodePath("RichTextLabel")
+metadata/_custom_type_script = "uid://71kh8v01rvbk"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -5.0
+offset_top = -6.0
+offset_right = 517.0
+offset_bottom = 604.0
+texture = ExtResource("2_s5ybh")
+expand_mode = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_top = -13.0
+offset_right = 21.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 13
+text = "✅ REGRAS DE VALIDAÇÃO
+📄 1. Validação de Documentação
+
+1.1. Validade dos Documentos
+
+    Todos os documentos apresentados devem estar válidos.
+
+    RG (Registro Geral) é válido por 10 anos após a data de emissão.
+
+1.2. Informações obrigatórias que devem coincidir em todos os documentos:
+
+    Data de nascimento
+
+    Nome do cidadão
+
+    Nome dos pais do cidadão
+
+    Etnia declarada
+
+1.3. Regras específicas por documento:
+
+🔹 RG (Registro Geral)
+
+    Deve terminar com a sigla \"MR\".
+
+        Exemplo válido: RG - 746.900-MR
+
+🔹 Código Biológico
+
+    Deve começar com a sigla \"MR\".
+
+        Exemplo válido: MR-0092-XT
+
+🔹 Certidão de Nascimento
+
+    O selo da certidão deve corresponder à região de nascimento.
+
+    Caso não haja selo, o documento é considerado inválido."
+fit_content = true
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 460.0
+offset_top = 15.0
+offset_right = 485.0
+offset_bottom = 40.0
+mouse_default_cursor_shape = 2
+text = "X"
+script = ExtResource("3_xd8c6")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

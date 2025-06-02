@@ -1,4 +1,4 @@
-[gd_scene load_steps=145 format=3 uid="uid://bnj3012sgdq65"]
+[gd_scene load_steps=148 format=3 uid="uid://bnj3012sgdq65"]
 
 [ext_resource type="Script" uid="uid://dij8r2qps2ich" path="res://scripts/game.gd" id="1_a5hx5"]
 [ext_resource type="Texture2D" uid="uid://b1dftehnwae8k" path="res://assets/background.png" id="1_e0wmo"]
@@ -27,11 +27,14 @@
 [ext_resource type="Script" uid="uid://bk6uwfla5akf1" path="res://scripts/b_reprovar.gd" id="18_fw3uj"]
 [ext_resource type="Texture2D" uid="uid://nw5hwuc2mwn1" path="res://assets/ferramenta-banca/mesa.png" id="18_ieted"]
 [ext_resource type="Script" uid="uid://beer7ol0bbhd6" path="res://scripts/ending.gd" id="19_fw3uj"]
+[ext_resource type="PackedScene" uid="uid://cyaglc6bc3xwc" path="res://scenes/components/regras_button.tscn" id="19_t7hmg"]
+[ext_resource type="Script" uid="uid://btpltqff4srww" path="res://scripts/regras_button.gd" id="20_q1jn7"]
 [ext_resource type="Texture2D" uid="uid://bq7tclnp83xsb" path="res://assets/ferramenta-banca/selo_positivo.png" id="24_4tvho"]
 [ext_resource type="PackedScene" uid="uid://uoro18rf0nxu" path="res://scenes/components/document_certidao_zoom.tscn" id="24_r6qep"]
 [ext_resource type="Texture2D" uid="uid://dd0oiml7db6kk" path="res://assets/ferramenta-banca/selo_positivo-hover.png" id="25_50tgx"]
 [ext_resource type="Texture2D" uid="uid://bba11ioc1s4lm" path="res://assets/ferramenta-banca/selo_negtivo.png" id="25_ieted"]
 [ext_resource type="Texture2D" uid="uid://d0y20cu463stk" path="res://assets/ferramenta-banca/selo-negativo-hover.png" id="26_qrbu1"]
+[ext_resource type="PackedScene" uid="uid://bsxkdbxt4nweq" path="res://scenes/components/Regras de validacao.tscn" id="33_qrbu1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0lfbs"]
 atlas = ExtResource("2_oni8f")
@@ -942,6 +945,14 @@ offset_right = 688.0
 offset_bottom = 723.5
 texture = ExtResource("18_ieted")
 
+[node name="RegrasButton" parent="HSplitContainer/SubViewportContainer/SubViewport" instance=ExtResource("19_t7hmg")]
+offset_left = 19.0
+offset_top = 360.0
+offset_right = 83.0
+offset_bottom = 441.0
+mouse_default_cursor_shape = 2
+script = ExtResource("20_q1jn7")
+
 [node name="documents" type="Panel" parent="HSplitContainer"]
 layout_mode = 2
 script = ExtResource("3_4ji0l")
@@ -995,6 +1006,51 @@ texture_normal = ExtResource("25_ieted")
 texture_pressed = ExtResource("26_qrbu1")
 texture_hover = ExtResource("26_qrbu1")
 script = ExtResource("18_fw3uj")
+
+[node name="regras" parent="HSplitContainer/documents" instance=ExtResource("33_qrbu1")]
+layout_mode = 1
+offset_left = 27.0
+offset_top = 51.5
+offset_right = 428.036
+offset_bottom = 372.783
+document_text = "✅ REGRAS DE VALIDAÇÃO
+📄 1. Validação de Documentação
+
+1.1. Validade dos Documentos
+
+    Todos os documentos apresentados devem estar válidos.
+
+    RG (Registro Geral) é válido por 10 anos após a data de emissão.
+
+1.2. Informações obrigatórias que devem coincidir em todos os documentos:
+
+    Data de nascimento
+
+    Nome do cidadão
+
+    Nome dos pais do cidadão
+
+    Etnia declarada
+
+1.3. Regras específicas por documento:
+
+🔹 RG (Registro Geral)
+
+    Deve terminar com a sigla \"MR\".
+
+        Exemplo válido: RG - 746.900-MR
+
+🔹 Código Biológico
+
+    Deve começar com a sigla \"MR\".
+
+        Exemplo válido: MR-0092-XT
+
+🔹 Certidão de Nascimento
+
+    O selo da certidão deve corresponder à região de nascimento.
+
+    Caso não haja selo, o documento é considerado inválido."
 
 [node name="ending" type="ColorRect" parent="."]
 visible = false
@@ -1063,21 +1119,22 @@ offset_bottom = 282.0
 document_text = ""
 
 [node name="declaracao" parent="ZOOM" instance=ExtResource("18_2xi1w")]
-offset_left = 5.0
-offset_top = -33.0
-offset_right = 508.0
-offset_bottom = 563.0
+offset_left = 24.0
+offset_top = 13.0
+offset_right = 527.0
+offset_bottom = 609.0
 
 [node name="certidao" parent="ZOOM" instance=ExtResource("24_r6qep")]
-offset_left = 187.0
-offset_top = 74.0
-offset_right = 660.0
-offset_bottom = 614.0
+offset_left = 208.0
+offset_top = 83.0
+offset_right = 681.0
+offset_bottom = 623.0
 document_text = ""
 
 [connection signal="pressed" from="HSplitContainer/SubViewportContainer/SubViewport/RgButton" to="HSplitContainer/SubViewportContainer/SubViewport/RgButton" method="_on_pressed"]
 [connection signal="pressed" from="HSplitContainer/SubViewportContainer/SubViewport/DeclaracaoButton" to="HSplitContainer/SubViewportContainer/SubViewport/DeclaracaoButton" method="_on_pressed"]
 [connection signal="pressed" from="HSplitContainer/SubViewportContainer/SubViewport/CertidaoButton" to="HSplitContainer/SubViewportContainer/SubViewport/CertidaoButton" method="_on_pressed"]
+[connection signal="pressed" from="HSplitContainer/SubViewportContainer/SubViewport/RegrasButton" to="HSplitContainer/SubViewportContainer/SubViewport/RegrasButton" method="_on_pressed"]
 [connection signal="pressed" from="HSplitContainer/documents/b_aprovar" to="HSplitContainer/documents/b_aprovar" method="_on_pressed"]
 [connection signal="pressed" from="HSplitContainer/documents/b_reprovar" to="HSplitContainer/documents/b_reprovar" method="_on_pressed"]
 [connection signal="pressed" from="ending/voltar" to="ending" method="_on_voltar_pressed"]
