@@ -5,7 +5,7 @@ extends Panel
 @onready var sprite: AnimatedSprite2D = get_node("../SubViewportContainer/SubViewport/et")
 @onready var ending: ColorRect = $"../../ending"
 const NOVA_CENA = "res://cenas/proxima_etapa.tscn"
-const FADE_IN_DURACAO = 0.5  # segundos
+const FADE_IN_DURACAO = 1.0  # segundos
 
 var animacoes_disponiveis := []
 var animacoes_restantes := []
@@ -30,9 +30,10 @@ func _ready():
 		animacoes_restantes = animacoes_disponiveis.duplicate()
 		animacoes_restantes.shuffle()
 
-		animacao_atual = animacoes_restantes.pop_front()
+		animacao_atual = animacoes_restantes[0]  # pega a primeira, mas não remove ainda
 		print("▶️ Primeira animação (inicial):", animacao_atual)
-		_reiniciar_sprite(animacao_atual)
+		await _reiniciar_sprite(animacao_atual)
+		animacoes_restantes.remove_at(0)  # remove após exibir
 	else:
 		push_error("❌ AnimatedSprite2D não encontrado no caminho especificado.")
 
