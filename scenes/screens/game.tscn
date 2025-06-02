@@ -20,7 +20,7 @@
 [ext_resource type="Script" uid="uid://dyhceg4w7pma5" path="res://scripts/declaracao_button.gd" id="6_vsgdc"]
 [ext_resource type="PackedScene" uid="uid://bgpnodm1qguo7" path="res://scenes/components/certidao_button.tscn" id="7_ggwlb"]
 [ext_resource type="Texture2D" uid="uid://ban5hlthsrbfa" path="res://assets/ferramenta-banca/lupa64x64.png" id="11_s3n12"]
-[ext_resource type="Script" uid="uid://dv13ikt5dlkro" path="res://scripts/lupa.gd" id="12_thpfx"]
+[ext_resource type="Script" path="res://scripts/lupa.gd" id="12_thpfx"]
 [ext_resource type="PackedScene" uid="uid://d01c0h8jplhye" path="res://scenes/components/document_rg_zoom.tscn" id="17_0v2ir"]
 [ext_resource type="Script" uid="uid://ctgmhiqo2fks0" path="res://scripts/b_aprovar.gd" id="17_2xi1w"]
 [ext_resource type="PackedScene" uid="uid://bxvm4kooiohjk" path="res://scenes/components/document_declaracao_zoom.tscn" id="18_2xi1w"]
@@ -1014,9 +1014,6 @@ offset_top = 51.5
 offset_right = 428.036
 offset_bottom = 372.783
 document_text = "
-✅ REGRAS DE VALIDAÇÃO
-
-
 📄 1. VALIDAÇÃO DE DOCUMENTAÇÃO
 ---------------------------------------------------------------
 1.1. Validade dos Documentos

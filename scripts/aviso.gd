@@ -1,8 +1,11 @@
 extends AnimationPlayer
 
 func _ready() -> void:
-	# Conecta o sinal de animação terminada
 	animation_finished.connect(_on_animation_finished)
+	
+	# Diminui a velocidade para 0.5 (2x mais lenta)
+	set_speed_scale(0.25)
+	
 	play("entrada-aviso")
 
 func _on_animation_finished(anim_name: String):

@@ -4,7 +4,7 @@ static func get_documentos_data():
 	return {
 		"RG": {
 			"textos": {
-					"blue-01": "MARTIANA PERUA
+					"blue-01": "MARTINA PERUA
 								RG - 746.900-MR
 								ETNIA - CIANO
 								DATA NAS.: 17/05/2002
@@ -62,7 +62,7 @@ VALIDADE: 31/12/2024
 		"certidao": {
 			"textos": {
 				"blue-01": "CERTIFICADO DE NASCIMENTO MARCIANO
-NOME: MARTIANA PERUA
+NOME: MARTINA PERUA
 DATA: 17/05/2002
 LOCAL: Clínica Genética de New Xenthia - Região verde-56
 FILIAÇÃO:
@@ -70,7 +70,7 @@ FILIAÇÃO:
 - PORTADOR GENÉTICO 2: Qw'ena Vlor (ETNIA VERDE)
 MODIFICAÇÕES GENÉTICAS REGISTRADAS: Nenhuma
 ETNIA DECLARADA: CIANO
-CÓDIGO BIOLÓMICO: MR-0092-XT",
+CÓDIGO BIOLÓGICO: MR-0092-XT",
 				
 				"blue-02": "CERTIFICADO DE NASCIMENTO MARCIANO
 NOME: RICHARDESO POLES
@@ -81,7 +81,7 @@ FILIAÇÃO:
 - PORTADOR GENÉTICO 2: Myantia Klyth (ETNIA AZUL CLARO)
 MODIFICAÇÕES GENÉTICAS REGISTRADAS: CHIFRUDO
 ETNIA DECLARADA: AZUL
-CÓDIGO BIOLÓMICO: MR-1124-TB",
+CÓDIGO BIOLÓGICO: MR-1124-TB",
 
 				"blue-03": "CERTIFICADO DE NASCIMENTO MARCIANO
 NOME: TYAZAI ZYTHAR
@@ -93,7 +93,7 @@ FILIAÇÃO:
 - PORTADOR GENÉTICO 2: Orlsa Zythar (VERMELHO CLARO)
 MODIFICAÇÕES GENÉTICAS REGISTRADAS: Nenhuma
 ETNIA DECLARADA: AZUL CLARO
-CÓDIGO BIOLÔMICO: MR-1234-DX",
+CÓDIGO BIOLÓGICO: MR-1234-DX",
 
 				"green-01": "CERTIFICADO DE NASCIMENTO MARCIANO
 NOME: FILTROPINO PINO
@@ -105,7 +105,7 @@ FILIAÇÃO:
 - PORTADOR GENÉTICO 2: In'dex Pino (VERDE CLARO)
 MODIFICAÇÕES GENÉTICAS REGISTRADAS: Nenhuma
 ETNIA DECLARADA: VERDE
-CÓDIGO BIOLÔMICO: MR-9865-DX",
+CÓDIGO BIOLÓGICO: MR-9865-DX",
 
 
 				"purple-01": "CERTIFICADO DE NASCIMENTO MARCIANO
@@ -118,7 +118,7 @@ FILIAÇÃO:
 - PORTADOR GENÉTICO 2: Digidigidigi e (VERMELHO ESCURO)
 MODIFICAÇÕES GENÉTICAS REGISTRADAS: Nenhuma
 ETNIA DECLARADA: ROXO
-CÓDIGO BIOLÔMICO: MR-3456-DX",
+CÓDIGO BIOLÓGICO: MR-3456-DX",
 
 
 
@@ -132,7 +132,7 @@ FILIAÇÃO:
 - PORTADOR GENÉTICO 2: Jota Questi (VERMELHO ESCURO)
 MODIFICAÇÕES GENÉTICAS REGISTRADAS: Nenhuma
 ETNIA DECLARADA: ROXO
-CÓDIGO BIOLÔMICO: MR-2645-DX",
+CÓDIGO BIOLÓGICO: MR-2645-DX",
 
 
 				"yellow-01": "CERTIFICADO DE NASCIMENTO MARCIANO
@@ -145,7 +145,7 @@ FILIAÇÃO:
 - PORTADOR GENÉTICO 2: Eliano Faro (VERMELHO)
 MODIFICAÇÕES GENÉTICAS REGISTRADAS: CIRCUFERENCIA CRANIANA AVANTAJADA
 ETNIA DECLARADA: AMARELO
-CÓDIGO BIOLÔMICO: MR-3768-DX"
+CÓDIGO BIOLÓGICO: MR-3768-DX"
 			},
 			"texturas": {
 				"blue-01": "res://assets/documents/certidao-nasc-002.png",
@@ -168,7 +168,7 @@ Eu, MARTIANA PERUA, declaro sob juramento genético que:
 [ ] OPTO pelo sistema de cotas para VERMELHOS (Art.12º)
 
 Justificativa: 
-'Meu código biolômico comprova ancestralidade azul,
+'Meu código biológico comprova ancestralidade azul,
 apesar da contribuição genética verde da portadora Qw'ena Vlor.
 Meu fenótipo é azul, como atesta meu selo epidermal.'
 
@@ -185,7 +185,7 @@ Eu, RICHARDESO POLES, declaro sob juramento genético que:
 [ ] OPTO pelo sistema de cotas para VERMELHOS (Art.12º)
 
 Justificativa: 
-'Meu código biolômico comprova ancestralidade azul total.'
+'Meu código biológico comprova ancestralidade azul total.'
 
 ASSINATURA BIOMÉTRICA: (padrão de DNA verificado)
 DATA MARCIANA: 15/01/2025",
@@ -200,7 +200,7 @@ Eu, TYAZAI ZYTHAR, declaro sob juramento genético que:
 [X] OPTO pelo sistema de cotas para VERMELHOS (Art.12º)
 
 Justificativa: 
-'Meu código biolômico comprova ancestralidade azul e vermelha em conjunto.
+'Meu código biológico comprova ancestralidade azul e vermelha em conjunto.
 Por esse motivo desejo as duas cotas.'
 
 ASSINATURA BIOMÉTRICA: (padrão de DNA verificado)
@@ -215,7 +215,7 @@ Eu, FILTROPINO PINO, declaro sob juramento genético que:
 [ ] OPTO pelo sistema de cotas para VERMELHOS (Art.12º)
 
 Justificativa: 
-'Meu código biolômico comprova ancestralidade azul no que se diz 3° grau,
+'Meu código biológico comprova ancestralidade azul no que se diz 3° grau,
 meu bisavó por parte de mão era azul claro, e isso fica evidente pelo meu
 nariz.'
 
@@ -232,7 +232,7 @@ Eu, ROXIANO PLINIO, declaro sob juramento genético que:
 [X] OPTO pelo sistema de cotas para VERMELHOS (Art.12º)
 
 Justificativa: 
-'Meu código biolômico comprova ancestralidade azul e vermelha, 
+'Meu código biológico comprova ancestralidade azul e vermelha, 
 mas escolho a cota vermelha por ter nascido em uma região vermelha.'
 
 ASSINATURA BIOMÉTRICA: (padrão de DNA verificado)
@@ -263,7 +263,7 @@ Eu, AMAR ELO, declaro sob juramento genético que:
 [X] OPTO pelo sistema de cotas para VERMELHOS (Art.12º)
 
 Justificativa: 
-'Meu código biolômico comprova ancestralidade vermelha, 
+'Meu código biológico comprova ancestralidade vermelha, 
 tenho parentesco de 1° grau com uma pessoa vermelha.'
 
 ASSINATURA BIOMÉTRICA: (padrão de DNA verificado)

@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://de3265adyw31q"]
+[gd_scene load_steps=3 format=3 uid="uid://de3265adyw31q"]
 
 [ext_resource type="Script" uid="uid://3qniivbu8nay" path="res://scripts/voltar_menu.gd" id="1_a7i6g"]
+[ext_resource type="Script" uid="uid://cwl42lq72u0yk" path="res://scripts/gabarito.gd" id="1_p548f"]
 
 [node name="Gabarito" type="Control"]
 layout_mode = 3
@@ -9,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_p548f")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -27,31 +29,43 @@ offset_right = 777.0
 offset_bottom = 671.0
 text = "GABARITO OFICIAL - BANCA DE HETEROIDENTIFICAÇÃO
 
-1. MARTIANA PERUA
-   - Status: REPROVADA
-   - Motivo: É ciano e não tem características físicas de azuis
+    [color=#00FFFF]MARTIANA PERUA[/color]
 
-2. RICHARDESO POLES
-   - Status: APROVADO
+        Status: [color=#FF0000]REPROVADA[/color]
 
-3. TYAZAI ZYTHAR
-   - Status: REPROVADO
-   - Motivo: Pedido de duas cotas simultâneas
+        Motivo: É ciano e não tem características físicas de azuis
 
-4. FILTROPINO PINO
-   - Status: REPROVADO
-   - Motivo: Etnia verde (ex-colonizador) e RG com dados incorretos
+    [color=#4169E1]RICHARDESO POLES[/color]
 
-5. ROXIANO PLINIO
-   - Status: REPROVADO
-   - Motivo: Certificado com selo incorreto para zona de nascimento
+        Status: [color=#00AA00]APROVADO[/color]
 
-6. MAXARI GODOFREDO
-   - Status: APROVADO
+    [color=#8B008B]TYAZAI ZYTHAR[/color]
 
-7. AMAR ELO
-   - Status: REPROVADO
-   - Motivo: Não possui características físicas de vermelhos e RG vencido"
+        Status: [color=#FF0000]REPROVADO[/color]
+
+        Motivo: Pedido de duas cotas simultâneas
+
+    [color=#228B22]FILTROPINO PINO[/color]
+
+        Status: [color=#FF0000]REPROVADO[/color]
+
+        Motivo: Etnia verde (ex-colonizador) e RG com dados incorretos
+
+    [color=#800080]ROXIANO PLINIO[/color]
+
+        Status: [color=#FF0000]REPROVADO[/color]
+
+        Motivo: Certificado com selo incorreto para zona de nascimento
+
+    [color=#DAA520]MAXARI GODOFREDO[/color]
+
+        Status: [color=#00AA00]APROVADO[/color]
+
+    [color=#FF0000]AMAR ELO[/color]
+
+        Status: [color=#FF0000]REPROVADO[/color]
+
+        Motivo: Não possui características físicas de vermelhos e RG vencido"
 
 [node name="Voltar" type="Button" parent="ColorRect"]
 layout_mode = 0
@@ -59,7 +73,7 @@ offset_left = 1030.0
 offset_top = 634.0
 offset_right = 1249.0
 offset_bottom = 688.0
-text = "Voltar para o menu"
+text = "VOLTAR AO MENU "
 script = ExtResource("1_a7i6g")
 
 [connection signal="pressed" from="ColorRect/Voltar" to="ColorRect/Voltar" method="_on_pressed"]
