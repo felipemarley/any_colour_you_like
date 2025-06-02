@@ -5,6 +5,7 @@ extends Button
 
 func _on_pressed() -> void:
 	
+	Global.aprovados += 1
 	rg.visible = false
 	certidao.visible = false
 	declaracao.visible = false

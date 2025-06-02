@@ -15,23 +15,17 @@ run/main_scene="uid://c88jviheskobs"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Global="*res://scripts/global.gd"
+
 [display]
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
 window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
 
 [gui]
 
 theme/custom_font="uid://b0fxyj22m7n40"
-
-[shader_globals]
-
-aprovados={
-"type": "int",
-"value": 0
-}
-reprovados={
-"type": "int",
-"value": 0
-}
