@@ -21,10 +21,8 @@ metadata/_custom_type_script = "uid://71kh8v01rvbk"
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = -1.0
-offset_top = -5.0
-offset_right = 399.0
-offset_bottom = 275.0
+offset_right = 400.0
+offset_bottom = 280.0
 texture = ExtResource("2_nadvo")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
@@ -32,10 +30,15 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 27.0
+offset_top = 21.0
+offset_right = -34.0
+offset_bottom = -31.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 42
+theme_override_font_sizes/normal_font_size = 20
 fit_content = true
+horizontal_alignment = 2
 vertical_alignment = 1

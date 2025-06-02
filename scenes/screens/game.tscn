@@ -1052,8 +1052,8 @@ offset_bottom = 655.0
 [node name="certidao" parent="ZOOM" instance=ExtResource("24_r6qep")]
 offset_left = 67.0
 offset_top = 76.0
-offset_right = 511.0
-offset_bottom = 614.0
+offset_right = 540.0
+offset_bottom = 616.0
 document_text = ""
 
 [connection signal="pressed" from="HSplitContainer/SubViewportContainer/SubViewport/RgButton" to="HSplitContainer/SubViewportContainer/SubViewport/RgButton" method="_on_pressed"]
