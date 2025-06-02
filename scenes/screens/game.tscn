@@ -898,7 +898,7 @@ show_behind_parent = true
 position = Vector2(337, 373)
 scale = Vector2(1.30029, 1.22363)
 sprite_frames = SubResource("SpriteFrames_yqjtg")
-animation = &"yellow-01"
+animation = &"blue-02"
 script = ExtResource("2_ln6eb")
 
 [node name="RgButton" parent="HSplitContainer/SubViewportContainer/SubViewport" instance=ExtResource("3_0q6jn")]
@@ -948,10 +948,10 @@ script = ExtResource("3_4ji0l")
 
 [node name="certidao" parent="HSplitContainer/documents" instance=ExtResource("5_ln6eb")]
 layout_mode = 1
-offset_left = 86.0
-offset_top = 256.0
-offset_right = -348.0
-offset_bottom = -305.0
+offset_left = 62.0
+offset_top = 242.5
+offset_right = -308.0
+offset_bottom = -219.5
 document_text = ""
 
 [node name="rg" parent="HSplitContainer/documents" instance=ExtResource("6_4ji0l")]
@@ -1063,16 +1063,16 @@ offset_bottom = 282.0
 document_text = ""
 
 [node name="declaracao" parent="ZOOM" instance=ExtResource("18_2xi1w")]
-offset_left = 571.0
-offset_top = 59.0
-offset_right = 1074.0
-offset_bottom = 655.0
+offset_left = 5.0
+offset_top = -33.0
+offset_right = 508.0
+offset_bottom = 563.0
 
 [node name="certidao" parent="ZOOM" instance=ExtResource("24_r6qep")]
-offset_left = 67.0
-offset_top = 76.0
-offset_right = 540.0
-offset_bottom = 616.0
+offset_left = 187.0
+offset_top = 74.0
+offset_right = 660.0
+offset_bottom = 614.0
 document_text = ""
 
 [connection signal="pressed" from="HSplitContainer/SubViewportContainer/SubViewport/RgButton" to="HSplitContainer/SubViewportContainer/SubViewport/RgButton" method="_on_pressed"]
