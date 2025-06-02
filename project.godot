@@ -18,6 +18,8 @@ config/icon="res://icon.svg"
 [autoload]
 
 Global="*res://scripts/global.gd"
+DocumentManager="*res://scripts/troca_texto_docs.gd"
+DocumentData="*res://scripts/document_data.gd"
 
 [display]
 

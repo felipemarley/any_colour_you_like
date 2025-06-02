@@ -1,44 +1,41 @@
 [gd_scene load_steps=3 format=3 uid="uid://bxvm4kooiohjk"]
 
 [ext_resource type="Script" uid="uid://71kh8v01rvbk" path="res://scripts/document_standard.gd" id="1_nlggq"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eyh3l"]
-bg_color = Color(1, 1, 1, 1)
+[ext_resource type="Texture2D" uid="uid://b6oda08ufyyct" path="res://assets/documents/declaracao-doc.png" id="2_n84qh"]
 
 [node name="DocumentTest" type="Panel"]
 anchors_preset = -1
 anchor_right = 0.169
 anchor_bottom = 0.371
-offset_right = -0.320023
-offset_bottom = -0.120026
+offset_right = 287.68
+offset_bottom = 329.88
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_eyh3l")
 script = ExtResource("1_nlggq")
 text_path = NodePath("RichTextLabel")
-texture_path = NodePath("carimbo")
 metadata/_custom_type_script = "uid://71kh8v01rvbk"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -5.0
+offset_top = -6.0
+offset_right = 517.0
+offset_bottom = 604.0
+texture = ExtResource("2_n84qh")
+expand_mode = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = -2.0
+offset_bottom = 3.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 42
+theme_override_font_sizes/normal_font_size = 30
 fit_content = true
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="carimbo" type="TextureRect" parent="."]
-visible = false
-layout_mode = 0
-offset_left = 5.0
-offset_top = 218.0
-offset_right = 45.0
-offset_bottom = 258.0
-mouse_filter = 2
-expand_mode = 1

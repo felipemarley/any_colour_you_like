@@ -1,17 +1,17 @@
 [gd_scene load_steps=3 format=3 uid="uid://d01c0h8jplhye"]
 
 [ext_resource type="Script" uid="uid://71kh8v01rvbk" path="res://scripts/document_standard.gd" id="1_hagfo"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eyh3l"]
-bg_color = Color(1, 1, 1, 1)
+[ext_resource type="Texture2D" uid="uid://dgi56run0v03m" path="res://assets/documents/rg-doc.png" id="2_nadvo"]
 
 [node name="DocumentTest" type="Panel"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -1.0
+offset_right = -882.0
+offset_bottom = -455.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_eyh3l")
 script = ExtResource("1_hagfo")
 document_text = "RICHARDESO DAZUAKER POLES
 RG - 111.222.444
@@ -19,15 +19,26 @@ CEF - 0921012912"
 text_path = NodePath("RichTextLabel")
 metadata/_custom_type_script = "uid://71kh8v01rvbk"
 
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 400.0
+offset_bottom = 280.0
+texture = ExtResource("2_nadvo")
+
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 27.0
+offset_top = 21.0
+offset_right = -34.0
+offset_bottom = -31.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 42
+theme_override_font_sizes/normal_font_size = 20
 fit_content = true
+horizontal_alignment = 2
 vertical_alignment = 1

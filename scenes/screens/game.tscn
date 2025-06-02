@@ -1,8 +1,9 @@
-[gd_scene load_steps=139 format=3 uid="uid://bnj3012sgdq65"]
+[gd_scene load_steps=145 format=3 uid="uid://bnj3012sgdq65"]
 
+[ext_resource type="Script" uid="uid://dij8r2qps2ich" path="res://scripts/game.gd" id="1_a5hx5"]
 [ext_resource type="Texture2D" uid="uid://b1dftehnwae8k" path="res://assets/background.png" id="1_e0wmo"]
 [ext_resource type="Texture2D" uid="uid://dh8jyycca2rmo" path="res://assets/aliens/alien-green-001.png" id="2_e0wmo"]
-[ext_resource type="Script" uid="uid://1xjq4y0pujq4" path="res://scenes/components/scripts/et.gd" id="2_ln6eb"]
+[ext_resource type="Script" uid="uid://1xjq4y0pujq4" path="res://scripts/et.gd" id="2_ln6eb"]
 [ext_resource type="Texture2D" uid="uid://l1y5hcl5m338" path="res://assets/aliens/alien-blue-001.png" id="2_oni8f"]
 [ext_resource type="PackedScene" uid="uid://cw2iey6y1eegl" path="res://scenes/components/RgButton.tscn" id="3_0q6jn"]
 [ext_resource type="Script" uid="uid://cfg1t4sh8q624" path="res://scripts/document_scene.gd" id="3_4ji0l"]
@@ -16,16 +17,21 @@
 [ext_resource type="PackedScene" uid="uid://djkb0d0xdkvpp" path="res://scenes/components/declaracao_button.tscn" id="5_yruvw"]
 [ext_resource type="PackedScene" uid="uid://c4escptl3u4if" path="res://scenes/components/document_rg.tscn" id="6_4ji0l"]
 [ext_resource type="Texture2D" uid="uid://d5yexutdnfxx" path="res://assets/aliens/alien-yellow-001.png" id="6_thpfx"]
-[ext_resource type="Script" uid="uid://dyhceg4w7pma5" path="res://scenes/components/scripts/declaracao_button.gd" id="6_vsgdc"]
+[ext_resource type="Script" uid="uid://dyhceg4w7pma5" path="res://scripts/declaracao_button.gd" id="6_vsgdc"]
 [ext_resource type="PackedScene" uid="uid://bgpnodm1qguo7" path="res://scenes/components/certidao_button.tscn" id="7_ggwlb"]
 [ext_resource type="Texture2D" uid="uid://ban5hlthsrbfa" path="res://assets/ferramenta-banca/lupa64x64.png" id="11_s3n12"]
-[ext_resource type="Script" path="res://scripts/lupa.gd" id="12_thpfx"]
+[ext_resource type="Script" uid="uid://dv13ikt5dlkro" path="res://scripts/lupa.gd" id="12_thpfx"]
 [ext_resource type="PackedScene" uid="uid://d01c0h8jplhye" path="res://scenes/components/document_rg_zoom.tscn" id="17_0v2ir"]
 [ext_resource type="Script" uid="uid://ctgmhiqo2fks0" path="res://scripts/b_aprovar.gd" id="17_2xi1w"]
 [ext_resource type="PackedScene" uid="uid://bxvm4kooiohjk" path="res://scenes/components/document_declaracao_zoom.tscn" id="18_2xi1w"]
 [ext_resource type="Script" uid="uid://bk6uwfla5akf1" path="res://scripts/b_reprovar.gd" id="18_fw3uj"]
+[ext_resource type="Texture2D" uid="uid://nw5hwuc2mwn1" path="res://assets/ferramenta-banca/mesa.png" id="18_ieted"]
 [ext_resource type="Script" uid="uid://beer7ol0bbhd6" path="res://scripts/ending.gd" id="19_fw3uj"]
+[ext_resource type="Texture2D" uid="uid://bq7tclnp83xsb" path="res://assets/ferramenta-banca/selo_positivo.png" id="24_4tvho"]
 [ext_resource type="PackedScene" uid="uid://uoro18rf0nxu" path="res://scenes/components/document_certidao_zoom.tscn" id="24_r6qep"]
+[ext_resource type="Texture2D" uid="uid://dd0oiml7db6kk" path="res://assets/ferramenta-banca/selo_positivo-hover.png" id="25_50tgx"]
+[ext_resource type="Texture2D" uid="uid://bba11ioc1s4lm" path="res://assets/ferramenta-banca/selo_negtivo.png" id="25_ieted"]
+[ext_resource type="Texture2D" uid="uid://d0y20cu463stk" path="res://assets/ferramenta-banca/selo-negativo-hover.png" id="26_qrbu1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0lfbs"]
 atlas = ExtResource("2_oni8f")
@@ -855,6 +861,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_a5hx5")
 metadata/_edit_vertical_guides_ = [210.0]
 
 [node name="Background" type="TextureRect" parent="."]
@@ -878,16 +885,18 @@ dragging_enabled = false
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="HSplitContainer"]
 layout_mode = 2
+size_flags_stretch_ratio = 3.55
 
 [node name="SubViewport" type="SubViewport" parent="HSplitContainer/SubViewportContainer"]
 transparent_bg = true
 handle_input_locally = false
+size = Vector2i(712, 727)
 render_target_update_mode = 4
 
 [node name="et" type="AnimatedSprite2D" parent="HSplitContainer/SubViewportContainer/SubViewport"]
 show_behind_parent = true
-position = Vector2(335, 345)
-scale = Vector2(1.30029, 1.10352)
+position = Vector2(337, 373)
+scale = Vector2(1.30029, 1.22363)
 sprite_frames = SubResource("SpriteFrames_yqjtg")
 animation = &"blue-03"
 script = ExtResource("2_ln6eb")
@@ -895,15 +904,15 @@ script = ExtResource("2_ln6eb")
 [node name="RgButton" parent="HSplitContainer/SubViewportContainer/SubViewport" instance=ExtResource("3_0q6jn")]
 offset_left = 27.0
 offset_top = 29.0
-offset_right = 99.0
-offset_bottom = 109.0
+offset_right = 84.0
+offset_bottom = 63.0
 script = ExtResource("4_kauht")
 
 [node name="DeclaracaoButton" parent="HSplitContainer/SubViewportContainer/SubViewport" instance=ExtResource("5_yruvw")]
 offset_left = 17.0
 offset_top = 85.0
-offset_right = 145.0
-offset_bottom = 213.0
+offset_right = 97.0
+offset_bottom = 175.0
 script = ExtResource("6_vsgdc")
 
 [node name="CertidaoButton" parent="HSplitContainer/SubViewportContainer/SubViewport" instance=ExtResource("7_ggwlb")]
@@ -926,6 +935,13 @@ texture_pressed = ExtResource("11_s3n12")
 texture_hover = ExtResource("11_s3n12")
 script = ExtResource("12_thpfx")
 
+[node name="mesa" type="TextureRect" parent="HSplitContainer/SubViewportContainer/SubViewport"]
+offset_left = -1.0
+offset_top = 474.5
+offset_right = 688.0
+offset_bottom = 723.5
+texture = ExtResource("18_ieted")
+
 [node name="documents" type="Panel" parent="HSplitContainer"]
 layout_mode = 2
 script = ExtResource("3_4ji0l")
@@ -936,17 +952,15 @@ offset_left = 86.0
 offset_top = 256.0
 offset_right = -348.0
 offset_bottom = -305.0
+document_text = ""
 
 [node name="rg" parent="HSplitContainer/documents" instance=ExtResource("6_4ji0l")]
 layout_mode = 1
-offset_left = 44.0
-offset_top = 60.0
-offset_right = -325.0
-offset_bottom = -525.0
-document_text = "RICHARDESO  POLES
-RG - 111.222.444
-CEF - 0921012912
-ETNIA - VERDE"
+offset_left = 40.0
+offset_top = 63.0
+offset_right = -329.0
+offset_bottom = -533.0
+document_text = ""
 
 [node name="declaracao" parent="HSplitContainer/documents" instance=ExtResource("4_o78e0")]
 layout_mode = 1
@@ -957,25 +971,29 @@ offset_left = 287.0
 offset_top = 31.0
 offset_right = -11.0
 offset_bottom = -311.0
-document_text = "DECLARO PARA OS DEVIDOS FINS QUE RICHARDESO É VERDE E TEM ACESSO À COTA E A SER ESTUDANTE DA UFRM"
 
-[node name="b_aprovar" type="Button" parent="HSplitContainer/documents"]
+[node name="b_aprovar" type="TextureButton" parent="HSplitContainer/documents"]
 layout_mode = 0
-offset_left = 46.0
-offset_top = 617.0
-offset_right = 249.0
-offset_bottom = 680.0
-text = "APROVAR"
+offset_left = 94.0
+offset_top = 559.0
+offset_right = 222.0
+offset_bottom = 687.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("24_4tvho")
+texture_pressed = ExtResource("25_50tgx")
+texture_hover = ExtResource("25_50tgx")
 script = ExtResource("17_2xi1w")
 
-[node name="b_reprovar" type="Button" parent="HSplitContainer/documents"]
+[node name="b_reprovar" type="TextureButton" parent="HSplitContainer/documents"]
 layout_mode = 0
-offset_left = 302.0
-offset_top = 617.0
-offset_right = 505.0
-offset_bottom = 680.0
-text = "REPROVAR
-"
+offset_left = 363.0
+offset_top = 559.0
+offset_right = 491.0
+offset_bottom = 687.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("25_ieted")
+texture_pressed = ExtResource("26_qrbu1")
+texture_hover = ExtResource("26_qrbu1")
 script = ExtResource("18_fw3uj")
 
 [node name="ending" type="ColorRect" parent="."]
@@ -1038,23 +1056,24 @@ text = "SAIR"
 position = Vector2(-2, 6)
 
 [node name="rg" parent="ZOOM" instance=ExtResource("17_0v2ir")]
-offset_left = 204.0
-offset_top = 55.0
-offset_right = 626.0
-offset_bottom = 279.0
+offset_left = 273.0
+offset_top = 18.0
+offset_right = 666.0
+offset_bottom = 282.0
+document_text = ""
 
 [node name="declaracao" parent="ZOOM" instance=ExtResource("18_2xi1w")]
-offset_left = 394.0
-offset_top = 143.0
-offset_right = 713.0
-offset_bottom = 554.0
-document_text = "DECLARO PARA OS DEVIDOS FINS QUE RICHARDESO É VERDE E TEM ACESSO À COTA E A SER ESTUDANTE DA UFRM"
+offset_left = 571.0
+offset_top = 59.0
+offset_right = 1074.0
+offset_bottom = 655.0
 
 [node name="certidao" parent="ZOOM" instance=ExtResource("24_r6qep")]
-offset_left = 106.0
-offset_top = 302.0
-offset_right = 590.0
-offset_bottom = 682.0
+offset_left = 67.0
+offset_top = 76.0
+offset_right = 540.0
+offset_bottom = 616.0
+document_text = ""
 
 [connection signal="pressed" from="HSplitContainer/SubViewportContainer/SubViewport/RgButton" to="HSplitContainer/SubViewportContainer/SubViewport/RgButton" method="_on_pressed"]
 [connection signal="pressed" from="HSplitContainer/SubViewportContainer/SubViewport/DeclaracaoButton" to="HSplitContainer/SubViewportContainer/SubViewport/DeclaracaoButton" method="_on_pressed"]
