@@ -12,27 +12,34 @@ static func get_documentos_data():
 								VALIDADE: 30/08/2034",
 								
 				"blue-02": "RICHARDESO POLES
-RG - 555.200-MR
+RG - 583.234-MR
 ETNIA - AZUL 
 DATA NAS.: 12/09/2000
 DATA EMISSÃO: 03/03/2020
 VALIDADE: 03/03/2030",
 
 				"blue-03": "TYAZAI ZYTHAR
-RG - 333.600-MR
+RG - 333.643-MR
 ETNIA - AZUL CLARO
 DATA NAS.: 30/11/1998
 DATA EMISSÃO: 22/01/2018
 VALIDADE: 22/01/2028
 ",
 				"green-01": "FILTROPINO PINO
-RG - 999.100-GR
+RG - 171.345-GR
 ETNIA - VERDE 
 DATA NAS.: 05/05/2005
-VALIDADE: 22/01/2025
+DATA EMISSÃO: 24/01/2015
+VALIDADE: 24/01/2025
 ",
 
-				"purple-01": "RG 05 - Roxo",
+				"purple-01": "ROXIANO PLINIO
+RG - 928.132-MR
+ETNIA - ROXO 
+DATA NAS.: 10/05/2000
+DATA EMISSÃO: 30/09/2018
+VALIDADE: 30/09/2028
+",
 				"red-01": "RG 06 - Vermelho",
 				"yellow-01": "RG 07 - Amarelo"
 			},
@@ -86,7 +93,19 @@ MODIFICAÇÕES GENÉTICAS REGISTRADAS: Nenhuma
 ETNIA DECLARADA: VERDE
 CÓDIGO BIOLÔMICO: MR-0001-DX",
 
-				"purple-01": "Certidão 05 - Roxo",
+
+				"purple-01": "CERTIFICADO DE NASCIMENTO MARCIANO
+NOME: ROXIANO PLINIO
+DATA: 10/05/2000
+LOCAL: Zoneamento da zona Z - Nova Colonia Vermelha
+
+FILIAÇÃO:
+- PORTADOR GENÉTICO 1: Souza Plinio (AZUL)
+- PORTADOR GENÉTICO 2: Digidigidigi e (VERMELHO ESCURO)
+MODIFICAÇÕES GENÉTICAS REGISTRADAS: Nenhuma
+ETNIA DECLARADA: ROXO
+CÓDIGO BIOLÔMICO: MR-0001-DX",
+
 				"red-01": "Certidão 06 - Vermelho",
 				"yellow-01": "Certidão 07 - Amarelo"
 			},
@@ -95,8 +114,8 @@ CÓDIGO BIOLÔMICO: MR-0001-DX",
 				"blue-02": "res://assets/documents/certidao-nasc-004.png",
 				"blue-03": "res://assets/documents/certidao-nasc-004.png",
 				"green-01": "res://assets/documents/certidao-nasc-002.png",
+				"purple-01": "res://assets/documents/certidao-nasc-004.png",
 				
-				"purple-01": "res://assets/documents/certidao-nasc-001.png",
 				"red-01": "res://assets/documents/certidao-nasc-002.png",
 				"yellow-01": "res://assets/documents/certidao-nasc-003.png"
 			}
@@ -166,7 +185,22 @@ nariz.'
 ASSINATURA BIOMÉTRICA: (padrão de DNA verificado)
 DATA MARCIANA: 15/01/2025",
 
-				"purple-01": "Declaração 05 - Roxo",
+
+				"purple-01": "FORMULÁRIO DE AUTOCLASSIFICAÇÃO ÉTNICA
+SOB PENA DE PERDA DE DIREITOS CIVIS POR FALSA DECLARAÇÃO
+
+Eu, ROXIANO PLINIO, declaro sob juramento genético que:
+
+[ ] OPTO pelo sistema de cotas para AZUIS (Art.7º)
+[X] OPTO pelo sistema de cotas para VERMELHOS (Art.12º)
+
+Justificativa: 
+'Meu código biolômico comprova ancestralidade azul e vermelha, 
+mas escolho a cota vermelha por ter nascido em uma região vermelha.'
+
+ASSINATURA BIOMÉTRICA: (padrão de DNA verificado)
+DATA MARCIANA: 15/01/2025",
+
 				"red-01": "Declaração 06 - Vermelho",
 				"yellow-01": "Declaração 07 - Amarelo"
 			},
