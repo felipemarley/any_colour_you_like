@@ -901,7 +901,7 @@ show_behind_parent = true
 position = Vector2(337, 373)
 scale = Vector2(1.30029, 1.22363)
 sprite_frames = SubResource("SpriteFrames_yqjtg")
-animation = &"yellow-01"
+animation = &"blue-02"
 script = ExtResource("2_ln6eb")
 
 [node name="RgButton" parent="HSplitContainer/SubViewportContainer/SubViewport" instance=ExtResource("3_0q6jn")]
@@ -1013,44 +1013,48 @@ offset_left = 27.0
 offset_top = 51.5
 offset_right = 428.036
 offset_bottom = 372.783
-document_text = "✅ REGRAS DE VALIDAÇÃO
-📄 1. Validação de Documentação
+document_text = "
+✅ REGRAS DE VALIDAÇÃO
 
+
+📄 1. VALIDAÇÃO DE DOCUMENTAÇÃO
+---------------------------------------------------------------
 1.1. Validade dos Documentos
+- Todos os documentos devem estar válidos
+- RG válido por 10 anos após emissão
 
-    Todos os documentos apresentados devem estar válidos.
-
-    RG (Registro Geral) é válido por 10 anos após a data de emissão.
-
-1.2. Informações obrigatórias que devem coincidir em todos os documentos:
-
-    Data de nascimento
-
-    Nome do cidadão
-
-    Nome dos pais do cidadão
-
-    Etnia declarada
+1.2. Informações obrigatórias (devem coincidir em TODOS documentos):
+- Data de nascimento
+- Nome completo do cidadão  
+- Nomes dos pais
+- Etnia declarada
 
 1.3. Regras específicas por documento:
-
 🔹 RG (Registro Geral)
+- Deve terminar com \"MR\" (Ex: RG - 746.900-MR)
 
-    Deve terminar com a sigla \"MR\".
-
-        Exemplo válido: RG - 746.900-MR
-
-🔹 Código Biológico
-
-    Deve começar com a sigla \"MR\".
-
-        Exemplo válido: MR-0092-XT
+🔹 Código Biológico  
+- Deve começar com \"MR\" (Ex: MR-0092-XT)
 
 🔹 Certidão de Nascimento
+- Selo deve corresponder à região de nascimento
+- Sem selo = documento inválido
 
-    O selo da certidão deve corresponder à região de nascimento.
+ 2. REGRAS DE ETNIAS E COTAS
+---------------------------------------------------------------
+2.1. Regras gerais:
+- Só pode tentar UMA cota por vez
+- Verdes NÃO têm direito a cota
 
-    Caso não haja selo, o documento é considerado inválido."
+2.2. Regras para mestiços:
+🔸 Cianos e Amarelos:
+- Só têm direito a cota se tiverem características físicas de:
+  * Azuis OU Vermelhos
+
+2.3. Características físicas por etnia:
+🔵 Azuis: Nariz grande
+🔴 Vermelhos: Orelhas pontudas e grandes
+🟢 Verdes: Antenas visíveis"
 
 [node name="ending" type="ColorRect" parent="."]
 visible = false
@@ -1100,13 +1104,29 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -44.5
-offset_top = -123.0
-offset_right = 44.5
-offset_bottom = -86.0
+offset_left = -47.0
+offset_top = -128.0
+offset_right = 42.0
+offset_bottom = -91.0
 grow_horizontal = 2
 grow_vertical = 0
 text = "SAIR"
+
+[node name="gabarito" type="Button" parent="ending"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -121.0
+offset_top = -240.0
+offset_right = 123.0
+offset_bottom = -192.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "GABARITO
+"
 
 [node name="ZOOM" type="Node2D" parent="."]
 position = Vector2(-2, 6)
@@ -1139,3 +1159,4 @@ document_text = ""
 [connection signal="pressed" from="HSplitContainer/documents/b_reprovar" to="HSplitContainer/documents/b_reprovar" method="_on_pressed"]
 [connection signal="pressed" from="ending/voltar" to="ending" method="_on_voltar_pressed"]
 [connection signal="pressed" from="ending/sair" to="ending" method="_on_sair_pressed"]
+[connection signal="pressed" from="ending/gabarito" to="ending" method="_on_gabarito_pressed"]

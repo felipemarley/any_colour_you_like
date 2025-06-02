@@ -1,0 +1,65 @@
+[gd_scene load_steps=2 format=3 uid="uid://de3265adyw31q"]
+
+[ext_resource type="Script" uid="uid://3qniivbu8nay" path="res://scripts/voltar_menu.gd" id="1_a7i6g"]
+
+[node name="Gabarito" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 39.0
+offset_right = 777.0
+offset_bottom = 671.0
+text = "GABARITO OFICIAL - BANCA DE HETEROIDENTIFICAÇÃO
+
+1. MARTIANA PERUA
+   - Status: REPROVADA
+   - Motivo: É ciano e não tem características físicas de azuis
+
+2. RICHARDESO POLES
+   - Status: APROVADO
+
+3. TYAZAI ZYTHAR
+   - Status: REPROVADO
+   - Motivo: Pedido de duas cotas simultâneas
+
+4. FILTROPINO PINO
+   - Status: REPROVADO
+   - Motivo: Etnia verde (ex-colonizador) e RG com dados incorretos
+
+5. ROXIANO PLINIO
+   - Status: REPROVADO
+   - Motivo: Certificado com selo incorreto para zona de nascimento
+
+6. MAXARI GODOFREDO
+   - Status: APROVADO
+
+7. AMAR ELO
+   - Status: REPROVADO
+   - Motivo: Não possui características físicas de vermelhos e RG vencido"
+
+[node name="Voltar" type="Button" parent="ColorRect"]
+layout_mode = 0
+offset_left = 1030.0
+offset_top = 634.0
+offset_right = 1249.0
+offset_bottom = 688.0
+text = "Voltar para o menu"
+script = ExtResource("1_a7i6g")
+
+[connection signal="pressed" from="ColorRect/Voltar" to="ColorRect/Voltar" method="_on_pressed"]

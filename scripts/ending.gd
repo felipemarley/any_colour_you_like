@@ -10,7 +10,6 @@ func _process(delta: float) -> void:
 )
 
 
-
 func _on_voltar_pressed() -> void:
 	Global.aprovados = 0
 	Global.reprovados = 0
@@ -18,3 +17,7 @@ func _on_voltar_pressed() -> void:
 
 func _on_sair_pressed() -> void:
 	get_tree().quit()
+
+
+func _on_gabarito_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/screens/gabarito.tscn")
